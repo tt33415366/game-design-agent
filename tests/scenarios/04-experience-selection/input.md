@@ -17,3 +17,7 @@ Design Brief confirmed in simulated approval B1: English documents; desktop brow
 ## D: Bounded Existing-Project Request
 
 Closed-fiction project: the user explicitly confirmed brief P1 for an English, one-session deduction puzzle whose satisfaction comes from discovering one solution. Replayability and multiple solutions are intentionally excluded. Scope P2 confirms the same core loop and a maximum of two local zero-spend prototype iterations, one remaining. The current request is only a review of this proposed button-copy correction: replace "Execute" with "Check answer". No other changes are requested. No playtest results are supplied. Review the request; do not implement it during this exercise.
+
+## E: Visual Prototype Validation Plan
+
+Closed-fiction project: the Design Brief and core gameplay/prototype scope were explicitly confirmed for a small top-down browser exploration prototype: one authored map with drawn terrain (trees, rocks, a river, two bridges), keyboard movement, collision, and a restart button. Two local zero-spend iterations remain. Produce the validation plan for the first playtest. Do not implement anything during this exercise.
