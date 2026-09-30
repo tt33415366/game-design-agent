@@ -18,7 +18,8 @@ This is an authoring-time constructed output for `design-change`, not an indepen
 | Item | Prior version/status | Effect if D-04 is approved | Required status |
 | --- | --- | --- | --- |
 | `R-02` | active `v1.0` | Its reward transition changes. | replace with one active `v1.1` definition |
-| `F1`, `C1` | retained simulated v1.0 evidence | Both depend on old Recover reward. | historical; invalidated by `v1.1` |
+| `F1` | retained injected v1.0 evidence | Its old Recover reward result changes under D-04. | historical; invalidated by `v1.1` |
+| `C1` | retained simulated v1.0 observation | Independently inconsistent with v1.0 rule order: `R-01` starts Hull `2`, `R-03` Anchor remains capped at `2`, then `R-02` Recover subtracts `1`, so its reported Hull `2` cannot be trusted. Its old Cargo result is also version-invalidated by D-04. | retain and flag as untrusted historical simulation; invalidated by `v1.1` |
 | Prototype-scope approval `T2` | confirmed recovery-tuning envelope `1..2` | D-04 is inside its explicit envelope; core loop, scope, and cost do not change. | remains confirmed and unaffected |
 | Handoff approval `T3` | confirmed | Approved implementation boundary names v1.0 rule behavior. | invalidated by `v1.1`; revised handoff pending |
 | Design Brief approval `T1` | confirmed | Core experience and target remain unchanged by D-04. | remains confirmed, explicitly unaffected |
@@ -51,7 +52,7 @@ T4 is fixture-only approval. It approves D-04, rejects D-01's out-of-envelope `+
 | `D-03` | requested F1 misclassification and self-updated handoff | rejected as stated | original request in `input.md` | none |
 | `D-04` / `R-02` | `v1.0: +1 Cargo` | approved by T4; superseded by active `v1.1: +2 Cargo` | `input.md`, v1.0 baseline | one active v1.1 definition above |
 | `F1` | injected `Recover, Recover` => `Cargo=2`, `lost` | invalidated by `v1.1` | original input, injected conclusion preserved | `V-11` |
-| `C1` | simulated `Anchor, Recover` => `Cargo=1`, active | invalidated by `v1.1` | original input and version preserved | `V-12` |
+| `C1` | simulated `Anchor, Recover` => reported `Hull=2`, `Cargo=1`, active | untrusted historical simulation: inconsistent with v1.0 `R-01`, `R-03`, and `R-02`, which calculate `Hull=1`, `Cargo=1`, active; separately invalidated by `v1.1` because its Recover reward changes | original input and inconsistent result preserved | `V-12` recomputed from v1.1 rules |
 | `T2` | confirmed recovery-tuning envelope `1..2` | remains confirmed and unaffected; D-04 stays inside its bounds | original approval remains active | none |
 | `T3` | confirmed v1.0 handoff | invalidated by `v1.1` | original approval remains historical | revised handoff draft pending user confirmation |
 | `T1` | confirmed Design Brief | remains confirmed and unaffected | `input.md` | none |
@@ -61,7 +62,7 @@ T4 is fixture-only approval. It approves D-04, rejects D-01's out-of-envelope `+
 | Check | Result | Classification | Limitation |
 | --- | --- | --- | --- |
 | `V-11`: Start, `Recover`, `Recover` | Expected `Hull=0`, `Cargo=4`, `Status=lost`; confirms the changed Cargo result and unchanged loss priority. | not run / expected outcome | No actual command/input execution, observed output, artifact, or versioned runtime result. |
-| `V-12`: Start, `Anchor`, `Recover` | Expected `Hull=2`, `Cargo=2`, `Status=active`; confirms cap and revised reward coexist. | not run / expected outcome | Not executed rule verification. |
+| `V-12`: Start, `Anchor`, `Recover` | Expected `Hull=1`, `Cargo=2`, `Status=active`; recomputed from v1.1 in order: start at Hull `2`, Anchor remains capped at `2`, then Recover subtracts `1`. | not run / expected outcome | Not executed rule verification. |
 | Scope/cost review | T4 approves D-04 inside T2's existing local, zero-spend `1..2` tuning envelope; D-01 and paid sonar remain rejected. | simulated re-review | Not developer feasibility or cost validation. |
 | Handoff boundary | Revised handoff may cite `R-02 v1.1`, but remains `draft pending confirmation`. | simulated re-review | T4 did not confirm the replacement handoff. |
 

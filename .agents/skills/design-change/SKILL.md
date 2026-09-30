@@ -22,7 +22,7 @@ For every affected item, record its old and new version, reason, and status in t
 
 - Mark affected planned verification cases, executed rule-verification results, prototype observations, and review findings as `invalidated by <version>`; retain their inputs, observed outputs, artifacts, and negative outcomes as historical evidence.
 - Re-open an affected checkpoint or handoff approval when its approved boundary or supporting rule/evidence changed. Unaffected approvals may remain confirmed only when the impact record explicitly names why they are unaffected.
-- Create replacement verification cases and re-review the revised active rules. Replacement checks remain `not run / expected outcome` until actual input or command, observed output, artifact/log path, and version are recorded.
+- Create replacement verification cases and re-review the revised active rules. Recompute every replacement expected state from the active rules' ordered transitions; do not copy an old observed or expected result and alter only the tuned value. Compare retained historical observations with the rules of their recorded version and flag any contradiction as untrusted historical simulation, separately from version invalidation. Replacement checks remain `not run / expected outcome` until actual input or command, observed output, artifact/log path, and version are recorded.
 
 ## Result
 

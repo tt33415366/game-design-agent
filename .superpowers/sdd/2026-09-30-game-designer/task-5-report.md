@@ -34,3 +34,15 @@
 | Scenario command in `tests/README.md` | Passed: `constructed scenario checks passed`. |
 | `/tmp/game-designer-tools/bin/python /data/lea/.codex/skills/.system/skill-creator/scripts/quick_validate.py .agents/skills/design-change` | Passed: `Skill is valid!` |
 | `git diff --check` and local Markdown-reference check | Passed with no whitespace output; `local reference targets exist`. |
+
+## Fix Round 2: Recomputed Replacement State
+
+- The raw fixture remains unchanged. Its historical simulated C1 observation reports `Anchor, Recover` at Hull `2`, but v1.0 rules calculate Hull `1`; the constructed output retains C1 and flags it as untrusted historical simulation, independently of its v1.1 invalidation.
+- V-12 is corrected to the recomputed v1.1 result: Hull `1`, Cargo `2`, active. The reusable `design-change` re-review step now requires recomputing replacement expected states from active ordered transitions and flagging historical rule contradictions rather than copying prior result fields.
+
+| Command or check | Result |
+| --- | --- |
+| `/tmp/game-designer-tools/bin/python -c ...` one-off Anchor/Recover arithmetic | Passed: `v1 Hull=1, Cargo=1; v1.1 Hull=1, Cargo=2; Status=active`. |
+| Scenario command in `tests/README.md` | Passed: `constructed scenario checks passed`. It now checks the untrusted historical C1 annotation and v1.1 V-12 Hull `1` / Cargo `2` fields. |
+| `/tmp/game-designer-tools/bin/python /data/lea/.codex/skills/.system/skill-creator/scripts/quick_validate.py .agents/skills/design-change` | Passed: `Skill is valid!` |
+| `git diff --check` and local Markdown-reference check | Passed with no whitespace output; `local reference targets exist`. |
