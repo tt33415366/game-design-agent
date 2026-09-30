@@ -8,3 +8,5 @@ Prefer specialized subagents for bounded exploration, implementation, testing, r
 Do not delegate trivial work merely for parallelism.
 Do not let multiple implementation agents edit the same files without explicit ownership boundaries.
 User instructions always take precedence over this orchestration policy.
+
+For game-design requests, read [the Game Designer contract](agents/game-designer.md) and route the request through its applicable skill; leave non-design repository work on its normal workflow.
