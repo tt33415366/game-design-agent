@@ -31,3 +31,10 @@
 - Re-ran `/tmp/game-designer-tools/bin/python /data/lea/.codex/skills/.system/skill-creator/scripts/quick_validate.py .agents/skills/gameplay-design` and `.agents/skills/system-design`: both returned `Skill is valid!`.
 - Re-ran relative Markdown link resolution: `markdown links: ok`; ran `git diff --check`: passed.
 - Recomputed canonical fixture cases: `V-01=(1, 5, extracted, 3, extracted)`, `V-02=(0, 6, lost, 3, hull-breach)`, `V-03=(4, 0, lost, 3, cargo-target-missed)`, `V-04=(3, 2, active, 1, section-resolved)`, and `V-05=(4, 0, active, 0, none)`.
+
+## Fix Round 2 Evidence (2026-09-30)
+
+- Removed the reusable `maximum of two prototype iterations` instruction and the template's `<0-2>` placeholder. The skill now preserves a project-supplied iteration limit and proposes a conservative limit only when it is missing; it explicitly does not replace a user budget.
+- Kept the constructed fixture's `2`-iteration limit unchanged because its simulated approval `S2` authorizes that scope.
+- Scanned `.agents/skills/gameplay-design`, `.agents/skills/system-design`, `README.md`, and `agents/game-designer.md` for fixed iteration caps (`two prototype`, `two iterations`, `maximum of two`, `0-2`): `reusable fixed-cap scan: no matches`.
+- Re-ran both skill validators: `Skill is valid!`; re-ran relative Markdown link resolution: `markdown links: ok`; ran `git diff --check`: passed.

@@ -40,7 +40,7 @@ Describe player choices, stakes, and the smallest content needed to exercise the
 
 - Validation question: `<question>`
 - Minimum playable content: `<scope>`
-- Maximum iterations: `<0-2>`
+- Maximum iterations: `<project-supplied limit, or conservative proposal pending confirmation>`
 - Time limit: `<limit>`
 - Spending limit: `<limit>`
 - Local technology: `<choice; technical feasibility pending developer confirmation>`

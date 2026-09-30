@@ -13,7 +13,7 @@ Use [the gameplay proposal template](templates/gameplay-proposal.md). Keep rule 
 
 1. State the player-facing core loop, choices, stakes, and observable outcomes. Classify supplied facts, Design Assumptions, and unvalidated experience claims.
 2. Offer only alternatives that could materially improve the agreed experience. For each, record benefit, production or learning risk, and a low-cost validation experiment.
-3. Specify the minimum playable scope, validation question, local technology assumption, excluded work, and a maximum of two prototype iterations. Treat technical architecture and effort estimates as tentative until developer confirmation.
+3. Specify the minimum playable scope, validation question, local technology assumption, excluded work, and the project's supplied iteration limit. If it is missing, propose a conservative limit for confirmation; never replace an explicit user budget. Treat technical architecture and effort estimates as tentative until developer confirmation.
 4. Submit core gameplay and prototype scope together for checkpoint confirmation. Keep the checkpoint `pending` until an explicit user approval reference is recorded; do not self-approve or start work that exceeds the confirmed budget.
 
 ## Result
