@@ -17,3 +17,5 @@ These are retained outputs from constructed agent exercises on 2026-09-30, not a
 [Independent browser and document verification](final-verification.md) records actual checks at the named revisions, separately from qualitative outputs. Its screenshots are retained in `final-browser/`. Exact temporary verifier copies are retained in `verification-scripts/`; their absolute workspace/tool paths describe the original run and must be adapted in another environment. The maintained prototype regression suite is `prototypes/salvage/tests/test_salvage.py`.
 
 Constructed authoritative examples and executable prototype checks are described separately in [the test overview](../README.md). These qualitative runs establish only the behavior observed under their recorded prompts, not a guarantee for future model outputs.
+
+[Final whole-branch review](final-review.md) retains its initial findings and clean scoped re-review after `a19d0b0`; [the fix report](final-fix-report.md) records the provenance and explicit behavior-change approval corrections. Historical qualitative runs predate those final refinements and remain unchanged.

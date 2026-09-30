@@ -2,7 +2,7 @@
 Define a reusable Game Designer agent that produces game design documents developers can use to plan implementation.
 
 ## Status
-All interview decisions (Q1-Q24), the complete shared understanding, and the five-ticket breakdown are approved. Tickets are published in the local-file tracker under .scratch/game-designer/issues. Subagent-driven implementation is in progress; completion requires task reviews and final verification.
+All interview decisions (Q1-Q24), the complete shared understanding, and the five-ticket breakdown are approved. All five local tickets under .scratch/game-designer/issues are complete. Subagent-driven implementation, task reviews, final integrated review, and local verification completed on 2026-09-30. The six skills, templates, three constructed scenario exercises, and playable prototype are delivered; retained evidence is indexed in tests/behavior/README.md. Real-project validation and Player Validation remain subsequent work.
 
 ## Initial Deliverable
 - A Game Designer agent with multiple dedicated skills and supporting document templates, rather than only a standalone instruction document.
