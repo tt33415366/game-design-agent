@@ -1,0 +1,26 @@
+{
+  "desktop": {
+    "canvas": [
+      1280,
+      900
+    ],
+    "samples": 2880,
+    "uniqueSampleColors": 58,
+    "opaqueSamples": 2880,
+    "nonBackgroundSamples": 1126,
+    "upperOnlyCrossing": true,
+    "lowerOnlyCrossing": true
+  },
+  "mobile-dpr2": {
+    "canvas": [
+      780,
+      1688
+    ],
+    "samples": 3315,
+    "uniqueSampleColors": 48,
+    "opaqueSamples": 3315,
+    "nonBackgroundSamples": 1353,
+    "upperOnlyCrossing": true,
+    "lowerOnlyCrossing": true
+  }
+}

@@ -16,6 +16,18 @@
     h1 { font-size: 2.25rem; font-weight: 400; letter-spacing: 0; line-height: 1.05; overflow-wrap: anywhere; }
     .subtitle, .eyeline, .meter-label { font-family: Arial, sans-serif; font-size: .75rem; letter-spacing: 0; color: #b8cbca; }
     .ship { display: grid; grid-template-columns: minmax(0, 1.35fr) minmax(260px, .65fr); gap: 20px; align-items: stretch; }
+    .schematic { margin: 0; min-width: 0; display: flex; flex-direction: column; }
+    .schematic .viewport { flex: 1; }
+    .schematic figcaption { padding-top: 12px; font-family: Arial, sans-serif; font-size: .8rem; line-height: 1.5; }
+    .schematic h2 { font-family: inherit; font-size: 1rem; margin-bottom: 4px; }
+    .legend { display: flex; flex-wrap: wrap; gap: 8px 16px; list-style: none; margin: 8px 0 0; padding: 0; }
+    .legend li { display: flex; align-items: center; gap: 7px; }
+    .key { display: inline-block; width: 16px; height: 16px; flex: 0 0 16px; }
+    .key-hull { border: 2px solid var(--mint); }
+    .key-structure { height: 0; border-top: 3px solid var(--line); }
+    .key-reactor { border-radius: 50%; background: var(--signal); color: var(--void); text-align: center; line-height: 16px; font-weight: bold; }
+    .key-damage { border-radius: 50%; background: var(--danger); }
+    .key-scan { height: 0; border-top: 1px solid var(--signal); }
     .viewport { position: relative; min-height: 390px; overflow: hidden; border: 1px solid var(--line); background: radial-gradient(circle at 50% 50%, #30454a 0 1px, transparent 2px) 0 0/52px 52px, linear-gradient(135deg, #152328, #0c1114); }
     .wreck { position: absolute; width: min(74vw, 530px); aspect-ratio: 1.35; left: 50%; top: 50%; transform: translate(-50%, -50%); }
     .wreck svg { width: 100%; height: 100%; filter: drop-shadow(0 0 18px rgba(128,215,188,.22)); }
@@ -28,24 +40,34 @@
     .brief { padding: 22px 18px 12px; }
     h2 { font-size: 1.65rem; font-weight: 400; margin-bottom: 8px; }
     #latest-result { color: #c4d4d2; min-height: 2.8em; line-height: 1.4; }
+    .route { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 6px; margin: 14px 0 0; padding: 0; list-style: none; font-family: Arial, sans-serif; }
+    .route-item { min-width: 0; border-top: 2px solid var(--line); padding-top: 7px; color: #9fb4b3; font-size: .75rem; line-height: 1.35; overflow-wrap: anywhere; }
+    .route-item strong { display: block; color: var(--ink); font-size: .85rem; font-weight: 400; }
+    .route-item-current { border-color: var(--signal); }
+    .route-item-current .route-status { color: var(--signal); }
+    .route-item-completed { border-color: var(--mint); }
+    .route-item-completed .route-status { color: var(--mint); }
+    .route-status { display: block; font-size: .65rem; color: #9fb4b3; }
     .actions { padding: 14px 18px 18px; align-items: stretch; }
     .action-set { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; flex: 1; }
+    .action-option { min-width: 0; display: grid; grid-template-rows: auto 1fr; gap: 5px; }
     .action { border: 1px solid var(--mint); background: transparent; color: var(--ink); padding: 12px 8px; cursor: pointer; min-height: 48px; }
     .action:hover, .action:focus-visible { background: var(--mint); color: #112225; outline: 2px solid var(--signal); outline-offset: 2px; }
     .action:disabled { border-color: #576a6d; color: #849596; cursor: not-allowed; }
     .action:disabled:hover, .action:disabled:focus-visible { background: transparent; color: #849596; outline: none; }
+    .action-preview { min-height: 2.4em; color: #b8cbca; font-family: Arial, sans-serif; font-size: .7rem; line-height: 1.35; }
     .restart { width: 45px; border: 1px solid var(--signal); background: transparent; color: var(--signal); cursor: pointer; font-family: Arial, sans-serif; font-size: 1.35rem; }
     .restart:hover, .restart:focus-visible { background: var(--signal); color: #24221c; outline: 2px solid var(--mint); outline-offset: 2px; }
     .log { border-top: 1px solid var(--line); padding: 14px 0 0; }
     .log-title { padding: 0 0 10px; }
     .log h2 { font-size: 1.1rem; margin: 0; }
-    #terminal { min-height: 24px; color: var(--signal); text-align: right; }
+    #terminal { min-width: 0; max-width: 70%; min-height: 24px; color: var(--signal); text-align: right; overflow-wrap: anywhere; }
     #event-log { margin: 0; padding: 0; list-style: none; border-top: 1px solid rgba(91,121,128,.5); }
     #event-log li { display: grid; grid-template-columns: 56px 1fr auto; gap: 8px; padding: 10px 0; border-bottom: 1px solid rgba(91,121,128,.35); color: #c6d8d5; }
     .event-number { color: var(--signal); font-family: Arial, sans-serif; }
     .result-extracted { color: var(--mint) !important; }
     .result-lost { color: var(--danger) !important; }
-    @media (max-width: 720px) { .bridge { padding: 15px; gap: 15px; } .masthead { align-items: start; flex-direction: column; } .ship { grid-template-columns: 1fr; } .viewport { min-height: 265px; } .actions { flex-direction: row; } }
+    @media (max-width: 720px) { .bridge { padding: 15px; gap: 15px; } .masthead { align-items: start; flex-direction: column; } .ship { grid-template-columns: 1fr; } .viewport { min-height: 265px; } .actions { flex-direction: row; } .log-title { align-items: start; flex-wrap: wrap; } #terminal { flex-basis: 100%; max-width: none; text-align: left; } }
     @media (prefers-reduced-motion: reduce) { .scan { animation: none; } }
   </style>
 </head>
@@ -56,13 +78,26 @@
       <p class="subtitle">Three sections. One hull. Extract five cargo.</p>
     </header>
     <section class="ship" aria-label="Salvage operation">
+      <figure class="schematic" aria-labelledby="schematic-title">
       <div class="viewport" aria-hidden="true">
         <div class="scan"></div>
         <div class="wreck"><svg viewBox="0 0 600 440" role="img"><path d="M72 246 185 104 413 80 531 188 477 316 274 374 106 333Z" fill="#263b40" stroke="#80d7bc" stroke-width="5"/><path d="m185 104 93 130 135-154M106 333l172-99 199 82M278 234l-4 140M413 80l64 236" fill="none" stroke="#5b7980" stroke-width="8"/><circle cx="278" cy="234" r="41" fill="#e8c66c" opacity=".9"/><path d="M242 234h72M278 198v72" stroke="#152328" stroke-width="9"/><circle cx="144" cy="276" r="13" fill="#ee866d"/><circle cx="443" cy="235" r="13" fill="#ee866d"/></svg></div>
       </div>
+      <figcaption>
+        <h2 id="schematic-title">Wreck schematic</h2>
+        <p class="subtitle">Not a live status display.</p>
+        <ul class="legend">
+          <li><span class="key key-hull" aria-hidden="true"></span>Hull outline</li>
+          <li><span class="key key-structure" aria-hidden="true"></span>Internal structure</li>
+          <li><span class="key key-reactor" aria-hidden="true">+</span><span>Reactor</span></li>
+          <li><span class="key key-damage" aria-hidden="true"></span>Damage markers</li>
+          <li><span class="key key-scan" aria-hidden="true"></span>Scan line</li>
+        </ul>
+      </figcaption>
+      </figure>
       <section class="console" aria-live="polite">
         <div class="meter-row"><div class="meter"><span class="meter-label">HULL INTEGRITY</span><strong id="hull">Hull: 4/4</strong></div><div class="meter"><span class="meter-label">SALVAGE CARGO</span><strong id="cargo">Cargo: 0</strong></div></div>
-        <div class="brief"><p class="eyeline">CURRENT WRECK SECTION</p><h2 id="section-name">Cargo Hold</h2><p id="latest-result">No actions resolved. Choose an approach.</p></div>
+        <div class="brief"><p class="eyeline">CURRENT WRECK SECTION</p><h2 id="section-name">Cargo Hold</h2><p id="latest-result">No actions resolved. Choose an approach.</p><ol class="route" id="route" aria-label="Section route"></ol></div>
         <div class="actions"><div class="action-set" id="action-set"></div><button class="restart" type="button" aria-label="Restart run" title="Restart run">&#8635;</button></div>
       </section>
     </section>
@@ -86,20 +121,56 @@
         return event.action + " resolved. Hull " + event.hull + ", cargo " + event.cargo + ".";
       }
 
+      function terminalText(event) {
+        if (!event) return "";
+        var totals = "Final cargo " + event.cargo + "/5 target, hull " + event.hull + "/4.";
+        if (event.outcome === "extracted") return "Extraction successful. " + totals + " Cargo reached 5 and hull survived.";
+        if (event.outcome === "hull-breach") return "Hull breach: run lost. " + totals + " Hull breach takes priority even when cargo meets or exceeds target.";
+        if (event.outcome === "cargo-target-missed") return "Cargo target missed: run lost. " + totals + " Hull survived, but cargo did not reach 5.";
+        return "";
+      }
+
+      function previewText(action) {
+        var preview = window.LatchlineRules.applyAction(state, action);
+        var cargoDelta = preview.cargo - state.cargo;
+        var hullDelta = preview.hull - state.hull;
+        return "Cargo " + (cargoDelta >= 0 ? "+" : "") + cargoDelta + " / Hull " + (hullDelta >= 0 ? "+" : "") + hullDelta;
+      }
+
+      function renderRoute() {
+        var route = document.getElementById("route");
+        route.replaceChildren();
+        Object.keys(sections).forEach(function (key) {
+          var section = Number(key);
+          var status = state.status === "active" && section === state.section ? "current" : section <= state.section ? "completed" : "upcoming";
+          var item = document.createElement("li");
+          item.className = "route-item route-item-" + status;
+          if (status === "current") item.setAttribute("aria-current", "step");
+          item.innerHTML = "<span class=\"route-status\">" + status.toUpperCase() + "</span><strong>" + sections[section] + "</strong>";
+          route.appendChild(item);
+        });
+      }
+
       function render() {
         document.getElementById("hull").textContent = "Hull: " + state.hull + "/4";
         document.getElementById("cargo").textContent = "Cargo: " + state.cargo;
         document.getElementById("section-name").textContent = state.status === "active" ? sections[state.section] : "Run complete";
         var latest = state.events[state.events.length - 1];
         document.getElementById("latest-result").textContent = resultText(latest);
-        terminal.textContent = state.status === "extracted" ? "Extraction successful" : state.status === "lost" ? (latest.outcome === "hull-breach" ? "Hull breach: run lost" : "Cargo target missed: run lost") : "";
+        terminal.textContent = state.status === "active" ? "" : terminalText(latest);
         terminal.className = state.status === "extracted" ? "result-extracted" : state.status === "lost" ? "result-lost" : "";
+        renderRoute();
         actionSet.replaceChildren();
         window.LatchlineRules.legalActions(state.section).forEach(function (action) {
+          var option = document.createElement("div");
+          var previewId = "preview-" + action.toLowerCase();
           var button = document.createElement("button");
-          button.type = "button"; button.className = "action"; button.textContent = action; button.disabled = state.status !== "active";
+          button.type = "button"; button.className = "action"; button.textContent = action; button.disabled = state.status !== "active"; button.setAttribute("aria-describedby", previewId);
           button.addEventListener("click", function () { state = window.LatchlineRules.applyAction(state, action); render(); });
-          actionSet.appendChild(button);
+          var preview = document.createElement("p");
+          preview.id = previewId; preview.className = "action-preview"; preview.textContent = state.status === "active" ? previewText(action) : "Run complete.";
+          option.className = "action-option"; option.append(button, preview);
+          actionSet.appendChild(option);
         });
         log.replaceChildren();
         state.events.forEach(function (event, index) {

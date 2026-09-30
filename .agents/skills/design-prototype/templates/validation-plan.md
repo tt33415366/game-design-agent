@@ -11,6 +11,9 @@
 ## Question and Fidelity
 
 - Validation question: `<observable question>`
+- Intended appeal: `<what the player may enjoy discovering, performing, expressing, or feeling>`
+- Observable signals: `<what an unassisted player does, says, or chooses that bears on the question>`
+- Decision after evidence: `continue | clarify | revise | stop`; `<criteria and owner>`
 - Minimum playable content: `<controls, state feedback, terminal result>`
 - Minimum fidelity: `<what must be represented and why>`
 - Simplified or omitted aspects: `<items and validation limitation>`
@@ -30,7 +33,11 @@
 | Check | Method | Expected evidence | Execution status | Limitation |
 | --- | --- | --- | --- | --- |
 | `<rule case>` | `<deterministic test>` | `<output>` | `not run / expected outcome` | `<does not prove experience>` |
-| `<interaction>` | `<browser/manual check>` | `<screenshot/log>` | `not run / expected outcome` | `<limitation>` |
-| `<player question>` | `<separate approved playtest>` | `<responses>` | `not run / expected outcome` | `<not yet run>` |
+| `<rendered-vs-collider correspondence>` | `<deterministic probe points against shared geometry>` | `<output>` | `not run / expected outcome` | `<does not prove readability or experience>` |
+| `<affordance honesty: drawn routes do not imply blocked traversal>` | `<visual diff or probe>` | `<output>` | `not run / expected outcome` | `<does not prove appeal>` |
+| `<connection integrity: required connections exist and cannot be bypassed>` | `<topology check>` | `<output>` | `not run / expected outcome` | `<coarse grids may miss runtime collision>` |
+| `<unassisted observation>` | `<participant attempts without explanation>` | `<actions, hesitation, and outcome>` | `not run / expected outcome` | `<comprehension/desirability limit>` |
+| `<assisted understanding>` | `<explanation followed by question>` | `<response>` | `not run / expected outcome` | `<cannot replace unassisted observation>` |
+| `<desirability question>` | `<separate approved playtest>` | `<response/choice>` | `not run / expected outcome` | `<not yet run>` |
 
 Planned checks are not evidence. Record the actual command or input, observed output, artifact or log path, and version in the evidence log before classifying a completed check as rule verification, developer observation, simulated result, or Player Validation.

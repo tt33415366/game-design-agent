@@ -1,0 +1,423 @@
+{
+  "desktop": {
+    "initial": {
+      "player": {
+        "x": 770,
+        "y": 790,
+        "facing": "east"
+      },
+      "camera": {
+        "x": 130,
+        "y": 340
+      },
+      "held": [],
+      "place": "",
+      "canvas": [
+        1280,
+        900,
+        1280,
+        900
+      ],
+      "assetDimensions": {
+        "town": [],
+        "viaDraw": true
+      }
+    },
+    "errors": [],
+    "console": [],
+    "failed": []
+  },
+  "central_water": {
+    "player": {
+      "x": 919.328,
+      "y": 790,
+      "facing": "east"
+    },
+    "camera": {
+      "x": 279.328,
+      "y": 340
+    },
+    "held": [],
+    "place": "",
+    "canvas": [
+      1280,
+      900,
+      1280,
+      900
+    ],
+    "assetDimensions": {
+      "town": [],
+      "viaDraw": true
+    }
+  },
+  "upper_bridge_exit": {
+    "player": {
+      "x": 1209.968000000003,
+      "y": 440.6719999999999,
+      "facing": "east"
+    },
+    "camera": {
+      "x": 569.968000000003,
+      "y": 0
+    },
+    "held": [],
+    "place": "",
+    "canvas": [
+      1280,
+      900,
+      1280,
+      900
+    ],
+    "assetDimensions": {
+      "town": [],
+      "viaDraw": true
+    }
+  },
+  "lower_bridge_exit": {
+    "player": {
+      "x": 1209.9679999999948,
+      "y": 1013.9840000000005,
+      "facing": "east"
+    },
+    "camera": {
+      "x": 569.9679999999948,
+      "y": 563.9840000000005
+    },
+    "held": [],
+    "place": "",
+    "canvas": [
+      1280,
+      900,
+      1280,
+      900
+    ],
+    "assetDimensions": {
+      "town": [],
+      "viaDraw": true
+    }
+  },
+  "tower": {
+    "player": {
+      "x": 607.3279999999999,
+      "y": 440.67199999999985,
+      "facing": "west"
+    },
+    "camera": {
+      "x": 0,
+      "y": 0
+    },
+    "held": [],
+    "place": "The Ruined Tower",
+    "canvas": [
+      1280,
+      900,
+      1280,
+      900
+    ],
+    "assetDimensions": {
+      "town": [],
+      "viaDraw": true
+    }
+  },
+  "grove": {
+    "player": {
+      "x": 1673.9679999999964,
+      "y": 1181.983999999997,
+      "facing": "east"
+    },
+    "camera": {
+      "x": 768,
+      "y": 636
+    },
+    "held": [],
+    "place": "Secluded Grove",
+    "canvas": [
+      1280,
+      900,
+      1280,
+      900
+    ],
+    "assetDimensions": {
+      "town": [],
+      "viaDraw": true
+    }
+  },
+  "nook": {
+    "player": {
+      "x": 543.3439999999993,
+      "y": 1317.9679999999964,
+      "facing": "west"
+    },
+    "camera": {
+      "x": 0,
+      "y": 636
+    },
+    "held": [],
+    "place": "",
+    "canvas": [
+      1280,
+      900,
+      1280,
+      900
+    ],
+    "assetDimensions": {
+      "town": [],
+      "viaDraw": true
+    }
+  },
+  "blur_reset": {
+    "before": {
+      "player": {
+        "x": 791.3280000000002,
+        "y": 790,
+        "facing": "east"
+      },
+      "camera": {
+        "x": 151.3280000000002,
+        "y": 340
+      },
+      "held": [
+        "KeyD"
+      ],
+      "place": "",
+      "canvas": [
+        1280,
+        900,
+        1280,
+        900
+      ],
+      "assetDimensions": {
+        "town": [],
+        "viaDraw": true
+      }
+    },
+    "after": {
+      "player": {
+        "x": 791.3280000000002,
+        "y": 790,
+        "facing": "east"
+      },
+      "camera": {
+        "x": 151.3280000000002,
+        "y": 340
+      },
+      "held": [],
+      "place": "",
+      "canvas": [
+        1280,
+        900,
+        1280,
+        900
+      ],
+      "assetDimensions": {
+        "town": [],
+        "viaDraw": true
+      }
+    },
+    "reset": {
+      "player": {
+        "x": 770,
+        "y": 790,
+        "facing": "east"
+      },
+      "camera": {
+        "x": 130,
+        "y": 340
+      },
+      "held": [],
+      "place": "",
+      "canvas": [
+        1280,
+        900,
+        1280,
+        900
+      ],
+      "assetDimensions": {
+        "town": [],
+        "viaDraw": true
+      }
+    },
+    "topology": {
+      "landmarks": [
+        true,
+        true,
+        true,
+        true
+      ],
+      "bridges": [
+        true,
+        true
+      ],
+      "eastOpen": true,
+      "eastWhenBridgesClosed": false,
+      "trunkBlocked": true,
+      "canopyOutsideWalkable": true,
+      "rockBlocked": true,
+      "waterCenterBlocked": true,
+      "bridgeCenters": [
+        true,
+        true
+      ]
+    }
+  },
+  "resize": {
+    "before": {
+      "player": {
+        "x": 868.6559999999996,
+        "y": 790,
+        "facing": "east"
+      },
+      "camera": {
+        "x": 228.6559999999996,
+        "y": 340
+      },
+      "held": [],
+      "place": "",
+      "canvas": [
+        1280,
+        900,
+        1280,
+        900
+      ],
+      "assetDimensions": {
+        "town": [],
+        "viaDraw": true
+      }
+    },
+    "after": {
+      "player": {
+        "x": 868.6559999999996,
+        "y": 790,
+        "facing": "east"
+      },
+      "camera": {
+        "x": 673.6559999999996,
+        "y": 368
+      },
+      "held": [],
+      "place": "",
+      "canvas": [
+        390,
+        844,
+        390,
+        844
+      ],
+      "assetDimensions": {
+        "town": [],
+        "viaDraw": true
+      }
+    }
+  },
+  "mobile": {
+    "initial": {
+      "player": {
+        "x": 770,
+        "y": 790,
+        "facing": "east"
+      },
+      "camera": {
+        "x": 575,
+        "y": 368
+      },
+      "held": [],
+      "place": "",
+      "canvas": [
+        390,
+        844,
+        390,
+        844
+      ],
+      "assetDimensions": {
+        "town": [],
+        "viaDraw": true
+      }
+    },
+    "errors": [],
+    "console": [],
+    "failed": []
+  },
+  "narrow": {
+    "initial": {
+      "player": {
+        "x": 770,
+        "y": 790,
+        "facing": "east"
+      },
+      "camera": {
+        "x": 610,
+        "y": 506
+      },
+      "held": [],
+      "place": "",
+      "canvas": [
+        320,
+        568,
+        320,
+        568
+      ],
+      "assetDimensions": {
+        "town": [],
+        "viaDraw": true
+      }
+    },
+    "errors": [],
+    "console": [],
+    "failed": []
+  },
+  "oversized": {
+    "initial": {
+      "player": {
+        "x": 770,
+        "y": 790,
+        "facing": "east"
+      },
+      "camera": {
+        "x": 0,
+        "y": 0
+      },
+      "held": [],
+      "place": "",
+      "canvas": [
+        2400,
+        1800,
+        2400,
+        1800
+      ],
+      "assetDimensions": {
+        "town": [],
+        "viaDraw": true
+      }
+    },
+    "errors": [],
+    "console": [],
+    "failed": []
+  },
+  "mobile-dpr2": {
+    "initial": {
+      "player": {
+        "x": 770,
+        "y": 790,
+        "facing": "east"
+      },
+      "camera": {
+        "x": 575,
+        "y": 368
+      },
+      "held": [],
+      "place": "",
+      "canvas": [
+        780,
+        1688,
+        390,
+        844
+      ],
+      "assetDimensions": {
+        "town": [],
+        "viaDraw": true
+      }
+    },
+    "errors": [],
+    "console": [],
+    "failed": []
+  }
+}

@@ -10,9 +10,9 @@ Read [the shared Game Designer contract](../../../agents/game-designer.md) befor
 ## Intake
 
 1. Identify whether this is a new project or an existing project. For an existing project, read the current record and authoritative documents before proposing changes.
-2. Confirm the document language for a new project. Gather target players, core experience, platform, team capabilities, and time budget only when they would change the design direction.
+2. Confirm the document language for a new project. Gather target players, intended attraction, supplied tastes or exclusions, platform, team capabilities, and time budget only when they would change direction. Use what the user has already expressed; ask only targeted gaps, never a taste questionnaire.
 3. Record supplied information as facts and unresolved low-risk details as Design Assumptions. Leave unspecified decision-changing details marked missing and ask targeted questions rather than inventing them.
-4. Set the Design Brief checkpoint to `pending` unless the user explicitly confirms the draft. Record the exact confirmation reference when they do.
+4. Keep a concept `open` unless the user selected one. Set the Design Brief checkpoint to `pending` unless the user explicitly confirms the framing; confirmation may cover taste and constraints without selecting a concept. Record the exact confirmation reference when they do.
 5. Leave later checkpoints pending. Do not define prototype work beyond a draft scope/budget until the core gameplay and prototype scope checkpoint is confirmed.
 
 ## Result

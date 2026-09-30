@@ -4,6 +4,8 @@ Define a reusable Game Designer agent that produces game design documents develo
 ## Status
 All interview decisions (Q1-Q24), the complete shared understanding, and the five-ticket breakdown are approved. All five local tickets under .scratch/game-designer/issues are complete. Subagent-driven implementation, task reviews, final integrated review, and local verification completed on 2026-09-30. The six skills, templates, three constructed scenario exercises, and playable prototype are delivered; retained evidence is indexed in tests/behavior/README.md. Real-project validation and Player Validation remain subsequent work.
 
+The approved experience-led follow-up is implemented in the existing skills and templates, with an optional source-informed design-approach reference. Independent constructed exercises and scoped reviews are retained in tests/behavior/experience-selection-assessment.md, including observed limitations; they do not establish guaranteed creative quality or instruction compliance.
+
 ## Initial Deliverable
 - A Game Designer agent with multiple dedicated skills and supporting document templates, rather than only a standalone instruction document.
 - Validate these against real design tasks before deciding whether standalone software is needed.
@@ -45,6 +47,17 @@ All interview decisions (Q1-Q24), the complete shared understanding, and the fiv
 ## Professional Standards
 - Demonstrate senior-level judgment through explicit trade-offs, production-risk assessment, attention to player learning costs, and proposed validation experiments.
 - Do not fabricate employment history or claim real industry experience.
+
+## Experience-Led Selection (Approved Follow-Up, 2026-09-30)
+- Establish supplied taste, desired feelings, appealing situations, and exclusions before choosing a concept; ask only direction-changing missing questions.
+- For an open concept after brief confirmation, compare three materially different player experiences, not cosmetic variants. Explain each attraction, defining interaction, primary creative priority, deliberate sacrifice, and largest uncertainty; recommend without inventing user selection.
+- Use source-informed design approaches as optional tools for judgment, not fictional employment, official studio-wide methods, or a requirement to mix every approach.
+- A brief may confirm audience, taste, and constraints while concept selection remains open. Preserve the existing three checkpoints; no extra concept gate is introduced.
+- Respect already selected concepts and bounded maintenance requests; do not force them through a new competition of concepts.
+- Prototype the largest uncertainty in the intended experience with observable signals and continue, clarify, revise, or stop criteria within the confirmed budget.
+- Distinguish rule correctness, comprehension, and desirability, including assisted versus unassisted observation. Do not treat a unique solution or limited replayability as an automatic defect.
+- Preserve negative feedback. Stop expanding a premise rejected by the user and propose reframing through existing approval/change paths; passing rule tests do not establish appeal.
+- Keep creative recommendation separate from implementation readiness; absent Player Validation alone still permits a qualified handoff with explicit limitations.
 
 ## Innovation
 - Established mechanics are acceptable when they suit the intended experience.

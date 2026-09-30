@@ -26,6 +26,8 @@ No row above changes the active authoritative rules while the decision is pendin
 
 Core experience, project scope, or material-cost changes require explicit user confirmation. A local tune is allowed only when a recorded approval explicitly covers the parameter and its envelope.
 
+When feedback rejects an experience premise, retain it in the ledger and propose replacement framing through the applicable intake/change route before any expansion.
+
 ## Invalidation Ledger
 
 | Item | Prior version and status | Affected by delta | Required status after approval | Historical evidence retained | Replacement required |

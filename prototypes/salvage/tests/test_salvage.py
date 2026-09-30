@@ -102,6 +102,25 @@ class SalvageInterfaceTests(unittest.TestCase):
         cls.browser.close()
         cls.playwright.stop()
 
+    def test_schematic_legend_is_visible_and_fits_desktop_and_mobile(self):
+        for width, height in ((1280, 900), (390, 844), (320, 568)):
+            with self.subTest(width=width):
+                page = self.browser.new_page(viewport={"width": width, "height": height})
+                try:
+                    page.goto(GAME)
+                    legend = page.get_by_role("figure", name="Wreck schematic")
+                    self.assertEqual(legend.count(), 1)
+                    self.assertTrue(legend.is_visible())
+                    for label in ("Hull outline", "Internal structure", "Reactor", "Damage markers", "Scan line"):
+                        self.assertTrue(legend.get_by_text(label, exact=True).is_visible())
+                    self.assertIn("Not a live status display", legend.inner_text())
+                    self.assertTrue(page.evaluate("document.documentElement.scrollWidth <= innerWidth"))
+                    drawing = legend.locator(".viewport").bounding_box()
+                    caption = legend.locator("figcaption").bounding_box()
+                    self.assertGreaterEqual(caption["y"], drawing["y"] + drawing["height"])
+                finally:
+                    page.close()
+
     def test_ui_plays_to_extraction_then_restart_clears_visible_log(self):
         page = self.browser.new_page(viewport={"width": 1280, "height": 800})
         errors = []
@@ -114,6 +133,7 @@ class SalvageInterfaceTests(unittest.TestCase):
         page.get_by_role("button", name="Stabilize").click()
         page.get_by_role("button", name="Retrieve").click()
         self.assertIn("Extraction successful", page.locator("#terminal").inner_text())
+        self.assertIn("Final cargo 5/5 target, hull 1/4", page.locator("#terminal").inner_text())
         self.assertIn("Hull: 1/4", page.locator("#hull").inner_text())
         self.assertIn("Cargo: 5", page.locator("#cargo").inner_text())
         self.assertEqual(page.locator("#event-log li").count(), 3)
@@ -121,6 +141,44 @@ class SalvageInterfaceTests(unittest.TestCase):
         self.assertIn("No actions resolved", page.locator("#latest-result").inner_text())
         self.assertEqual(page.locator("#event-log li").count(), 0)
         self.assertEqual(errors, [])
+
+    def test_ui_shows_route_and_non_mutating_action_previews(self):
+        page = self.browser.new_page(viewport={"width": 320, "height": 568})
+        page.goto(GAME)
+        self.assertIn("CURRENT\nCargo Hold", page.locator("#route").inner_text())
+        self.assertIn("UPCOMING\nRelay", page.locator("#route").inner_text())
+        self.assertIn("UPCOMING\nReactor", page.locator("#route").inner_text())
+        before_preview = page.evaluate("window.LatchlineSalvage.getState()")
+        retrieve = page.get_by_role("button", name="Retrieve")
+        self.assertEqual(retrieve.get_attribute("aria-describedby"), "preview-retrieve")
+        self.assertIn("Cargo +2 / Hull -1", page.locator("#preview-retrieve").inner_text())
+        self.assertIn("Cargo +0 / Hull +0", page.locator("#preview-mark").inner_text())
+        self.assertEqual(page.evaluate("window.LatchlineSalvage.getState()"), before_preview)
+        retrieve.click()
+        self.assertIn("COMPLETED\nCargo Hold", page.locator("#route").inner_text())
+        self.assertIn("CURRENT\nRelay", page.locator("#route").inner_text())
+        self.assertIn("UPCOMING\nReactor", page.locator("#route").inner_text())
+        self.assertTrue(page.evaluate("document.documentElement.scrollWidth <= innerWidth"))
+
+    def test_terminal_explanations_show_final_resources_and_priority(self):
+        page = self.browser.new_page(viewport={"width": 320, "height": 568})
+        page.goto(GAME)
+        page.get_by_role("button", name="Retrieve").click()
+        page.get_by_role("button", name="Strip").click()
+        page.get_by_role("button", name="Retrieve").click()
+        terminal = page.locator("#terminal").inner_text()
+        self.assertIn("Final cargo 6/5 target, hull 0/4", terminal)
+        self.assertIn("Hull breach takes priority", terminal)
+        self.assertTrue(page.evaluate("document.documentElement.scrollWidth <= innerWidth"))
+        self.assertIn("Run complete", page.locator("#preview-retrieve").inner_text())
+        page.get_by_role("button", name="Restart run").click()
+        page.get_by_role("button", name="Mark").click()
+        page.get_by_role("button", name="Stabilize").click()
+        page.get_by_role("button", name="Mark").click()
+        terminal = page.locator("#terminal").inner_text()
+        self.assertIn("Final cargo 0/5 target, hull 4/4", terminal)
+        self.assertIn("Hull survived, but cargo did not reach 5", terminal)
+        self.assertTrue(page.evaluate("document.documentElement.scrollWidth <= innerWidth"))
 
     def test_ui_log_shows_action_deltas_including_capped_recovery(self):
         page = self.browser.new_page(viewport={"width": 1280, "height": 800})

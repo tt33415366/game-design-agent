@@ -1,0 +1,9 @@
+* { box-sizing: border-box; }
+html, body { margin: 0; min-height: 100%; overflow: hidden; background: #79b55a; font-family: Georgia, serif; }
+canvas { display: block; width: 100vw; height: 100vh; }
+.hud { position: fixed; top: 18px; left: 22px; pointer-events: none; color: #263923; text-shadow: 0 1px 0 rgba(255,255,255,.55); }
+h1 { margin: 0; font-size: 22px; font-weight: 700; letter-spacing: 0; }
+#place { min-height: 22px; margin: 3px 0 0; font-size: 16px; font-style: italic; }
+#reset { position: fixed; right: 18px; top: 18px; min-width: 42px; min-height: 36px; border: 1px solid #49613c; border-radius: 4px; background: rgba(249, 247, 219, .92); color: #263923; font: 600 13px system-ui, sans-serif; cursor: pointer; }
+#reset:hover, #reset:focus-visible { background: #fffbea; outline: 2px solid #2f644d; outline-offset: 2px; }
+@media (max-width: 440px) { .hud { top: 12px; left: 14px; } h1 { font-size: 18px; } #place { font-size: 14px; } #reset { right: 12px; top: 10px; } }

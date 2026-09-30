@@ -15,9 +15,9 @@
 
 ## Actual Evidence
 
-| Date | Input or command | Observed output | Artifact/log path and version | Classification | Limitation or negative result |
+| Date | Input or command | Observed output | Artifact/log path and version | Classification | Evidence kind and limitation or negative result |
 | --- | --- | --- | --- | --- |
-| `<YYYY-MM-DD>` | `<command/input>` | `<output>` | `<path and revision/version>` | `rule verification | developer observation | simulated result | Player Validation` | `<limitation>` |
+| `<YYYY-MM-DD>` | `<command/input>` | `<output>` | `<path and revision/version>` | `rule verification | developer observation | simulated result | Player Validation` | `rule correctness | unassisted observation | assisted understanding | desirability; <limitation>` |
 
 ## Outstanding Validation
 

@@ -21,7 +21,9 @@
 | Topic | Current information | Source or status |
 | --- | --- | --- |
 | Target players | `<value or missing>` | `<user source / Design Assumption>` |
-| Core experience | `<value or missing>` | `<user source / Design Assumption>` |
+| Intended attraction or experience | `<value or missing>` | `<user source / Design Assumption>` |
+| Taste and exclusions | `<supplied preferences, dislikes, or none supplied>` | `<user source / Design Assumption>` |
+| Concept | `<open, or selected concept>` | `<explicit user selection reference, or pending selection>` |
 | Platform | `<value or missing>` | `<user source / Design Assumption>` |
 | Team capabilities | `<value or missing>` | `<user source / Design Assumption>` |
 | Time budget | `<value or missing>` | `<user source / Design Assumption>` |

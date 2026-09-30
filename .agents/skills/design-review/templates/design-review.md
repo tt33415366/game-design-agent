@@ -1,5 +1,13 @@
 # Design Review Record
 
+Templates are scalable project artifacts, not mandatory response scripts. For a bounded review-only request, use the advisory section and only relevant fields; use the full record for formal readiness or handoff work.
+
+## Bounded Review Advisory
+
+- Directional conclusion: `<concise assessment>`
+- Assumptions: `<supplied choices and missing context>`
+- Before implementation: `<authoritative source, decision, or check still needed>`
+
 ## Authority and Scope
 
 - Project: `<name>`
@@ -17,6 +25,7 @@
 - Readiness: `blocked | qualified handoff draft | ready for confirmation`
 - Blocking findings: `<none or IDs>`
 - Player Validation: `available | not performed | not applicable`; `<qualification and follow-up>`
+- Experience-evidence decision: `continue | clarify | revise | stop | unavailable`; `<signals, evidence limit, and owner>`
 - Development Handoff Draft checkpoint: `pending | confirmed`; `<explicit approval reference or none>`
 
 ## Consistency and Actionability Checks

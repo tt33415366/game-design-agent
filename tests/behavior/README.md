@@ -13,6 +13,8 @@ These are retained outputs from constructed agent exercises on 2026-09-30, not a
 | Extension dispatch | [fresh run](dispatch-forward-test.md) | Both reachability and input dispatch conflicts detected. |
 | Revision | [initial runs](change-forward-test.md) | Includes preserved harness-error correction and historical incorrect expected Hull total; not acceptance evidence for arithmetic. |
 | Revision recomputation | [fresh run](change-fresh-forward-test.md) | Recomputed ordered transitions, flagged inconsistent history, retained unaffected approvals, and reopened handoff. |
+| Experience selection | [baseline](experience-selection-baseline.md) | Historical baseline preserved approval/budget boundaries but offered one easy concept with cosmetic alternatives rather than distinct experiences. |
+| Experience-led workflow | [assessment and linked runs](experience-selection-assessment.md) | Compares before a provisional loop, preserves selected concepts, and gives bounded review advice; retains initial failures and an evidence-labeling limitation in the narrow budget retest. |
 
 [Independent browser and document verification](final-verification.md) records actual checks at the named revisions, separately from qualitative outputs. Its screenshots are retained in `final-browser/`. Exact temporary verifier copies are retained in `verification-scripts/`; their absolute workspace/tool paths describe the original run and must be adapted in another environment. The maintained prototype regression suite is `prototypes/salvage/tests/test_salvage.py`.
 
