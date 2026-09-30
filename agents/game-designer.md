@@ -24,7 +24,7 @@ Seek confirmation before changing the core experience, project scope, or a choic
 
 ## Skill Routes
 
-Read this contract before direct invocation of any skill, then check that its required project-record state exists.
+Read this contract before direct invocation of any skill. `design-intake` has no pre-existing-record prerequisite for a new project: it creates the initial record. For an existing project, it loads the current record first. Later skills require the applicable intake state and checkpoint prerequisites.
 
 | Request | Route | Availability |
 | --- | --- | --- |

@@ -12,7 +12,7 @@
 | Subject | Document | Status |
 | --- | --- | --- |
 | Project record and agreed framing | `<this file>` | authoritative |
-| Glossary | `<path or pending>` | authoritative |
+| Glossary | `<path or pending>` | `authoritative when referenced; otherwise pending` |
 | System rules | `<path or pending>` | authoritative when created |
 | Prototype evidence | `<path or pending>` | record only |
 
