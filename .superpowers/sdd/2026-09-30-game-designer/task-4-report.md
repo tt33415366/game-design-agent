@@ -23,3 +23,17 @@
 - The review evidence inside `expected-review.md` is explicitly a constructed `simulated result`, not an executed implementation review. `V-01` through `V-04` are planned cases only, with no runtime artifact or log.
 - No Player Validation, developer feasibility confirmation, playable prototype, spending, deployment, or implementation authorization occurred. The constructed handoff remains `draft pending confirmation` with no approval reference.
 - The pre-existing unrelated modifications under `.scratch/game-designer/issues/` and untracked `tests/behavior/` were left unstaged and untouched.
+
+## Fix Round 1: Dispatch Consistency
+
+- An independent forward evaluation reported that its proposed correction preserved the old `R-02` catch-all without checking whether it would dispatch the new `Overload` action. Its artifact was not present in this worktree during this fix; this report records the controller-provided finding rather than claiming a local inspection of that artifact.
+- `design-review` now requires a focused check for every new input: inspect existing catch-all or dispatch rules so the extension is reachable and non-conflicting while previous legal-input behavior remains explicit.
+- `expected-review.md` now records `F-03` as a critical dispatch contradiction. `D-03` explicitly amends `R-02` dispatch: `Gather` routes to `R-01`, `Release` to unchanged Release behavior in `R-02`, `Overload` to `R-03`, and unknown inputs remain ignored with no state or feedback change.
+- The manual document comparison checks existing Gather and Release behavior, new Overload routing, and unknown-input behavior. It is not executable verification; `V-01` through `V-05` remain `not run / expected outcome`.
+
+| Command or check | Actual result |
+| --- | --- |
+| `/tmp/game-designer-tools/bin/python /data/lea/.codex/skills/.system/skill-creator/scripts/quick_validate.py .agents/skills/design-review` | Passed: `Skill is valid!` |
+| `git diff --check` | Passed with no output. |
+| Focused `/tmp/game-designer-tools/bin/python -c ...` dispatch-consistency check | Passed: `dispatch consistency checks passed`; it asserts the raw fixture remains separate, the skill requires catch-all/dispatch inspection, range/reachability/dispatch corrections are explicit, old/new/unknown input behavior has a manual comparison, planned cases remain unrun, and qualified readiness follows all three resolved critical findings. |
+| Local Markdown target check using `/tmp/game-designer-tools/bin/python -c ...` | Passed: `local reference targets exist`. |

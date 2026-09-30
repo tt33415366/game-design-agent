@@ -11,7 +11,7 @@ Use the [review record template](templates/design-review.md) and [Development Ha
 
 ## Review
 
-1. Check consistency among state ranges, legal inputs, ordered transitions, terminal or exceptional behavior, feedback, verification cases, project scope, approvals, and dependencies.
+1. Check consistency among state ranges, legal inputs, ordered transitions, terminal or exceptional behavior, feedback, verification cases, project scope, approvals, and dependencies. For each new input, inspect existing catch-all or dispatch rules: the extension must be reachable and non-conflicting while previous legal-input behavior remains explicit.
 2. Check actionability: every in-scope implementation item must identify the authoritative rule IDs, inputs, state transitions, visible outcome, edge cases, and unresolved developer questions. Block readiness for a known critical contradiction, missing necessary state/transition, unbounded or incompatible scope, or another condition that makes implementation indeterminate.
 3. Record risks, unvalidated claims, evidence limitations, and required follow-up. A planned case is `not run / expected outcome`, not rule-verification evidence. Rule verification and developer observation do not establish comprehension, fun, balance, accessibility, or feasibility.
 4. Missing Player Validation must be named as a qualification and follow-up, but does not by itself block a qualified Development Handoff Draft. Do not require a playable prototype when the confirmed project scope does not require one.
