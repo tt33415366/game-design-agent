@@ -122,6 +122,18 @@ class SalvageInterfaceTests(unittest.TestCase):
         self.assertEqual(page.locator("#event-log li").count(), 0)
         self.assertEqual(errors, [])
 
+    def test_ui_log_shows_action_deltas_including_capped_recovery(self):
+        page = self.browser.new_page(viewport={"width": 1280, "height": 800})
+        page.goto(GAME)
+        page.get_by_role("button", name="Retrieve").click()
+        self.assertIn("Cargo +2 / Hull -1", page.locator("#event-log li").nth(0).inner_text())
+        page.get_by_role("button", name="Stabilize").click()
+        self.assertIn("Cargo +0 / Hull +1", page.locator("#event-log li").nth(1).inner_text())
+        page.get_by_role("button", name="Restart run").click()
+        page.get_by_role("button", name="Mark").click()
+        page.get_by_role("button", name="Stabilize").click()
+        self.assertIn("Cargo +0 / Hull +0", page.locator("#event-log li").nth(1).inner_text())
+
 
 if __name__ == "__main__":
     unittest.main(verbosity=2)

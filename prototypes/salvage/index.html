@@ -13,7 +13,7 @@
     .masthead, .meter-row, .actions, .log-title { display: flex; align-items: center; justify-content: space-between; gap: 14px; }
     .masthead { border-bottom: 1px solid var(--line); padding-bottom: 13px; }
     h1, h2, p { margin: 0; }
-    h1 { font-size: clamp(1.55rem, 4vw, 2.45rem); font-weight: 400; letter-spacing: 0; }
+    h1 { font-size: 2.25rem; font-weight: 400; letter-spacing: 0; line-height: 1.05; overflow-wrap: anywhere; }
     .subtitle, .eyeline, .meter-label { font-family: Arial, sans-serif; font-size: .75rem; letter-spacing: 0; color: #b8cbca; }
     .ship { display: grid; grid-template-columns: minmax(0, 1.35fr) minmax(260px, .65fr); gap: 20px; align-items: stretch; }
     .viewport { position: relative; min-height: 390px; overflow: hidden; border: 1px solid var(--line); background: radial-gradient(circle at 50% 50%, #30454a 0 1px, transparent 2px) 0 0/52px 52px, linear-gradient(135deg, #152328, #0c1114); }
@@ -102,9 +102,12 @@
           actionSet.appendChild(button);
         });
         log.replaceChildren();
-        state.events.forEach(function (event) {
+        state.events.forEach(function (event, index) {
+          var previous = index === 0 ? { hull: 4, cargo: 0 } : state.events[index - 1];
+          var cargoDelta = event.cargo - previous.cargo;
+          var hullDelta = event.hull - previous.hull;
           var item = document.createElement("li");
-          item.innerHTML = "<span class=\"event-number\">" + event.order + "</span><span>" + sections[event.section] + ": " + event.action + "</span><span>H " + event.hull + " / C " + event.cargo + "</span>";
+          item.innerHTML = "<span class=\"event-number\">" + event.order + "</span><span>" + sections[event.section] + ": " + event.action + "</span><span>Cargo " + (cargoDelta >= 0 ? "+" : "") + cargoDelta + " / Hull " + (hullDelta >= 0 ? "+" : "") + hullDelta + "</span>";
           log.appendChild(item);
         });
       }
