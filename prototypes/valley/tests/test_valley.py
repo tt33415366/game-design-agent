@@ -61,6 +61,40 @@ class ValleyTests(unittest.TestCase):
         self.assertTrue(result["rockCenter"])
         self.assertFalse(result["rockCorner"])
 
+    def test_push_log_becomes_plank_and_blocks_otherwise(self):
+        result = self.evaluate("""() => {
+          const d = __valleyDebug, w = ValleyWorld, r = ValleyRules;
+          d.reset(); d.setPlayer(753, 712);
+          const pushed = r.push(d.player, {KeyD: true}, w, d.log);
+          const before = d.log;
+          const plankPos = { x: 1005, y: 722 };
+          return {
+            startLog: before, pushedLog: pushed.log, moved: pushed.moved,
+            narrowsBlocked: w.blockedAt(1005, 660, 10),
+            plankWalkable: !w.blockedAt(1005, 712, 10, { plank: true }),
+            logBlocksPlayer: w.blockedAt(850, 700, 10, { logBlocked: before })
+          };
+        }""")
+        self.assertTrue(result["moved"])
+        self.assertGreater(result["pushedLog"]["x"], result["startLog"]["x"])
+        self.assertTrue(result["narrowsBlocked"])
+        self.assertTrue(result["plankWalkable"])
+        self.assertTrue(result["logBlocksPlayer"])
+
+    def test_reveal_fires_once_and_resets(self):
+        result = self.evaluate("""() => {
+          const d = __valleyDebug, w = ValleyWorld;
+          d.reset();
+          const reveal = w.revealFor(1005, 442);
+          const nook = w.revealFor(300, 1320);
+          d.setPlayer(1005, 442);
+          return { revealId: reveal ? reveal.id : null, nookReveal: nook,
+            landmarksWithReveal: w.landmarks.filter(l => l.reveal).length };
+        }""")
+        self.assertEqual(result["revealId"], "crossing")
+        self.assertIsNone(result["nookReveal"])
+        self.assertEqual(result["landmarksWithReveal"], 3)
+
     def test_bfs_reaches_landmarks_detour_and_each_crossing(self):
         result = self.evaluate("""() => {
           const w = ValleyWorld, cell = 12, radius = 10;

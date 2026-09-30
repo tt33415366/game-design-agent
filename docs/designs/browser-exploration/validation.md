@@ -67,6 +67,17 @@ Player Validation for this prototype is complete. Classification: Player Validat
 
 Development handoff remains pending. Do not treat developer inspection, the earlier salvage experience, or constructed agent exercises as observations of this prototype's appeal.
 
+### Iteration v2 (arrival payoff + push micro-interaction), 2026-09-30
+
+Revised scope confirmed 09:25 UTC (2h / 1 iteration / zero spend; absolute stop 11:25:47 UTC). Implemented: three arrival reveals (tower, crossing, grove) with once-only inline flavor text; one pushable log that locks into a plank across the narrows at (930,700) enabling a shortcut to the east bank; reveal/log/place state cleared on restart. Fern Nook intentionally has no reveal.
+
+Verification (root-run, downgraded independence — the delegated worker subagent failed on upstream 502 and implementation was done in-thread):
+- Full suite: 7 tests pass (`test_valley.py`), covering v1 movement/collision/topology/reset plus push-to-plank geometry and reveal-once semantics.
+- Real-browser smoke: player pushed the log to a locked plank and walked across to the east bank (x=2035) with zero page/console errors; all three reveals fired exactly once with flavor text; screenshots `v2-log-plank.png`, `v2-{tower,crossing,grove}-reveal.png` under `prototypes/valley/tests/evidence/`.
+- Debug trail preserved: three push-follow iterations and a narrows-sizing correction (log height < narrows height) were needed; these are recorded as execution errors, not instruction gaps.
+
+Player Validation for v2: not performed. The validation question (per F6) awaits the user's unassisted first play: does the user investigate a landmark unprompted, and after the first reveal, voluntarily seek another landmark?
+
 ### Side-Conversation Directive (2026-09-30, user-approved)
 
 Recorded from the user's side-conversation exchange with the assistant. This is context and direction for the next phase, not a checkpoint confirmation.

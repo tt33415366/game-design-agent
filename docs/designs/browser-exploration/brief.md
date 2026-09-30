@@ -4,7 +4,7 @@ Updated: 2026-09-30. This is an actual project discussion, not a constructed acc
 
 ## Project Record
 
-- Current stage: Player Validation complete; direction stopped as-is, pending user decision on whether to reframe.
+- Current stage: revised prototype in progress. User selected arrival-payoff + richer-space hypotheses and confirmed the revised combined checkpoint with a 2-hour / 1-iteration / zero-spend budget (2026-09-30 09:25 UTC; absolute stop 11:25:47 UTC). Impact record: [change-impact-2026-09-30-arrival-payoff.md](change-impact-2026-09-30-arrival-payoff.md). Revised gameplay proposal: [gameplay-revision-2026-09-30.md](gameplay-revision-2026-09-30.md). Authoritative rules for v2: [system-v2-draft.md](system-v2-draft.md) (v2.0, supersedes v1.1 where in conflict; v1.1 retained as historical).
 - Document language: English, confirmed with the brief.
 - Canonical framing and current proposal: this document.
 - Authoritative system rules: [system.md](system.md).
