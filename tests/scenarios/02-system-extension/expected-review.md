@@ -10,11 +10,12 @@ This is an authoring-time constructed exercise of `design-review`, not a control
 - Core gameplay and prototype scope approval: `SIMULATED USER APPROVAL E2, 2026-09-30`
 - Requested change: add local, zero-spend `Overload` while preserving `Gather` and `Release`
 - Input classification: `simulated input` and `simulated approval`
+- Post-review behavior-change decision: `SIMULATED USER APPROVAL E3, 2026-09-30: "Approve changing Gather at Charge 2 from an accepted no-op to adding Charge 3, expressly relaxing the request to preserve Gather behavior so Overload can be reached. This does not approve the Development Handoff Draft."`
 
 ## Review Outcome
 
 - Initial contradictory draft readiness: `blocked`
-- Corrected draft readiness: `qualified handoff draft`
+- Corrected draft readiness: `qualified handoff draft` only after the explicit constructed E3 decision resolves the preservation-versus-reachability conflict.
 - Development Handoff Draft checkpoint: `pending`; no simulated handoff approval is supplied.
 - Player Validation: `not performed`. This qualifies the handoff: player comprehension, fun, balance, and accessibility remain unestablished. It does not block the corrected, bounded handoff draft.
 
@@ -26,7 +27,8 @@ This is an authoring-time constructed exercise of `design-review`, not a control
 | `F-02` | legal transition | `R-01`, contradictory `R-03` | `R-01` retains state at charge `2`, so no legal input reaches the `R-03` precondition. | critical | Change `R-01` to add charge while `S-01<3`, with full feedback at `3`. | resolved by `D-02` |
 | `F-03` | input dispatch | `R-02` edge case, proposed `R-03` | Existing `R-02` ignores every input other than `Gather` or `Release`, so it would ignore actionable `Overload` before `R-03` could run. | critical | Amend the canonical dispatch rule to route `Overload` to `R-03` and preserve ignored behavior for unknown inputs. | resolved by `D-03` |
 | `F-04` | preservation and scope | `R-02`, request, corrected draft | Release must retain its threshold, transition, and visible outcomes; the extension adds one action only. | high | Preserve the Release transition verbatim while amending only its input-dispatch edge case; exclude scoring, UI, network, and persistence redesign. | resolved by `D-03` |
-| `F-05` | evidence and player claim | `V-01`, requested extension | Existing and new verification cases are planned only. No Player Validation is available. | medium | Retain `not run / expected outcome`; obtain a separately approved player test before claims about comprehension, fun, balance, or accessibility. | open qualification |
+| `F-05` | preservation versus reachability | `R-01`, request, proposed `D-02` | Existing `Gather` at Charge `2` is an accepted no-op. Raising the capacity to `3` makes `Gather` add Charge at `2`, so the reachability correction changes existing `Gather` behavior despite the request to preserve it. | high | Retain the conflict as blocked unless an explicit decision specifically relaxes the original `Gather` preservation constraint. `SIMULATED USER APPROVAL E3` supplies that exact constructed decision; handoff confirmation alone would not. | resolved by `E3`; `D-02` remains an explicitly approved behavior change |
+| `F-06` | evidence and player claim | `V-01`, requested extension | Existing and new verification cases are planned only. No Player Validation is available. | medium | Retain `not run / expected outcome`; obtain a separately approved player test before claims about comprehension, fun, balance, or accessibility. | open qualification |
 
 The critical contradictions make the submitted draft unimplementable. The corrected deltas below are the only proposed canonical changes; until a user confirms the handoff, they are a draft rather than an authoritative replacement for the raw fixture rules.
 
@@ -35,7 +37,7 @@ The critical contradictions make the submitted draft unimplementable. The correc
 | Delta ID | Canonical source | Corrected change | Rules/state/feedback affected | Scope effect |
 | --- | --- | --- | --- | --- |
 | `D-01` | `S-01` | Change range to integer `0..3`; show `Charge: n/3`. | `S-01`, `R-01`, `R-03` feedback | Supports the new reachable threshold only. |
-| `D-02` | `R-01` | If `S-01<3`, add `1`; otherwise retain all state. Show `Charge full` at `3`. | `R-01` | Preserves Gather as an accepted no-op only at the new full capacity. |
+| `D-02` | `R-01` | If `S-01<3`, add `1`; otherwise retain all state. Show `Charge full` at `3`. | `R-01` | Changes existing `Gather` behavior at Charge `2`; permitted only by the exact constructed E3 approval, which expressly relaxes the original preservation constraint. |
 | `D-03` | `R-02` edge case, new `R-03` | Keep the existing `R-02` Release precondition, transition, and outcomes unchanged. Replace its input-dispatch edge case with: `Gather` dispatches to `R-01`; `Release` dispatches to `R-02`; `Overload` dispatches to `R-03`; any other input is ignored with no state or feedback change. Add `R-03`: `Overload` is legal in an active run; when `S-01>=3`, set `S-01=0`, add `3` to `S-02`, and show `Beacon overloaded`; below `3`, retain all state and show `Need 3 charge`. | `R-02`, `R-03` | Adds one local action; preserves Release and ignored unknown-input behavior; excludes network, saving, art, economy rebalance. |
 
 ## Corrected Verification Cases
@@ -54,7 +56,7 @@ This is a manual document comparison of the corrected deltas, not executable rul
 
 | Input category | Manual observation of corrected draft | Result |
 | --- | --- | --- |
-| Existing `Gather` | `R-01` remains the destination; only its capacity changes from `2` to `3`. At full Charge it remains an accepted no-op. | consistent |
+| Existing `Gather` | `R-01` remains the destination, but its capacity changes from `2` to `3`; `Gather` at `2` now adds Charge. This does not preserve the old behavior and is included only because E3 explicitly approves that relaxation. | consistent after E3 |
 | Existing `Release` | `R-02` remains the destination with its existing `>=2`, subtract `2`, add `1`, and existing visible outcomes. | consistent |
 | New `Overload` | The amended `R-02` dispatch routes it to `R-03`, whose Charge `3` and below-`3` behaviors are explicit. | consistent |
 | Unknown input | The amended `R-02` dispatch retains ignored behavior with no state or feedback change. | consistent |
@@ -64,7 +66,7 @@ This is a manual document comparison of the corrected deltas, not executable rul
 | Item | Classification | Actual input or observation | Observed output | Artifact/version | Limitation |
 | --- | --- | --- | --- | --- | --- |
 | Contradictory-draft review | simulated result | Constructed comparison of `S-01`, `R-01`, `R-02`, and proposed `R-03` in `input.md` | `F-01`, `F-02`, and `F-03` block readiness | This document, constructed fixture | Not an executed implementation check. |
-| Corrected-draft review | simulated result | Manual document comparison in `Manual Consistency Check` | Critical range, reachability, and dispatch contradictions resolved; old and unknown input behavior remains explicit | This document, constructed fixture | Not executable rule verification or developer feasibility confirmation. |
+| Corrected-draft review | simulated result | Manual document comparison in `Manual Consistency Check` | Critical range, reachability, and dispatch contradictions resolved; the changed `Gather` behavior at Charge `2` is explicitly authorized by E3, while Release and unknown input behavior remain explicit | This document, constructed fixture | Not executable rule verification or developer feasibility confirmation. |
 | Verification cases | not run / expected outcome | `V-01` through `V-05` | No observed runtime output | none | Planned outcomes are not rule-verification evidence. |
 | Player experience | Player Validation | none | Not performed | none | No comprehension, fun, balance, or accessibility claim is supported. |
 
@@ -78,7 +80,7 @@ This is a manual document comparison of the corrected deltas, not executable rul
 
 | Included item | Authoritative IDs | Required behavior and observable outcome | Edge cases | Excluded work |
 | --- | --- | --- | --- | --- |
-| Charge capacity and Gather update | `S-01`, `R-01` | Store `0..3` Charge; show `/3`; Gather fills through `3` and reports full there. | Gather at `3` leaves state unchanged. | Change to Release, persistence, network, economy rebalance. |
+| Charge capacity and Gather update | `S-01`, `R-01` | Store `0..3` Charge; show `/3`; Gather fills through `3` and reports full there. E3 separately authorizes the resulting change at Charge `2`; this handoff remains pending and does not supply that authorization. | Gather at `3` leaves state unchanged. | Change to Release, persistence, network, economy rebalance. |
 | Input dispatch and Overload action | amended `R-02`, `R-03` | Route `Overload` to `R-03`; at Charge `3`, reset Charge to `0`, add `3` Score, and show overload result. Keep Release behavior unchanged. | Below `3`, retain state and show `Need 3 charge`; unknown inputs remain ignored with no state or feedback change. | New currencies, art, sound, accounts, save/load. |
 
 | Open item | Owner | Effect if unresolved | Status |
