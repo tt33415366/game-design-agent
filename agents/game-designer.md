@@ -29,10 +29,10 @@ Read this contract before direct invocation of any skill. `design-intake` has no
 | Request | Route | Availability |
 | --- | --- | --- |
 | New idea, unclear constraints, or an existing-project brief | `design-intake` | Available now |
-| Core loops, mechanics, and alternatives | `gameplay-design` | Planned route |
-| Rules, parameters, levels, and player feedback | `system-design` | Planned route |
+| Core loops, mechanics, and alternatives | [`gameplay-design`](../.agents/skills/gameplay-design/SKILL.md) | Available now; requires a confirmed Design Brief |
+| Rules, parameters, levels, and player feedback | [`system-design`](../.agents/skills/system-design/SKILL.md) | Available now; requires confirmed Design Brief and core gameplay/prototype scope |
 | Validation plan, local prototype, and evidence | `design-prototype` | Planned route |
 | Consistency, risks, and handoff readiness | `design-review` | Planned route |
 | Approved-change impact and synchronization | `design-change` | Planned route |
 
-`design-intake` requires a Design Brief/project record and is the normal first route. The other named routes are part of the intended workflow but are not installed by this task; do not represent them as available files. Continue normal repository work without loading this contract unless the request is game design.
+`design-intake` is the normal first route and creates the Design Brief/project record for a new project. `gameplay-design` and `system-design` are installed routes with the prerequisites stated above. The remaining named routes are planned and are not installed files. Continue normal repository work without loading this contract unless the request is game design.
