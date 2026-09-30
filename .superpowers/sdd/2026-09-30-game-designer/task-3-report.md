@@ -40,3 +40,16 @@ Observed: `Evidence checks passed: desktop/mobile no overflow, no console errors
 - Iteration 1 implemented rules/UI and passed deterministic checks. Iteration 2 corrected a screenshot-observed disabled-button focus state and recaptured evidence. The fixture's maximum of two iterations is exhausted.
 - Rule tests verify `R-01` through `R-09` behavior exercised by `V-01` through `V-05`, the hull cap, terminal input no-op, UI restart, and render without state change. Browser evidence confirms visible extraction, hull-breach priority, and cargo-target-missed results.
 - No Player Validation occurred. The result does not demonstrate comprehension of the winning route, fun, balance, accessibility completeness, feasibility, or production readiness.
+
+## Fix Round 1
+
+- Controller-supplied constructed input `SIMULATED USER APPROVAL S3, 2026-09-30` permits exactly one additional local, zero-spend correction iteration for delta feedback, fixed typography, and evidence traceability. It is not an actual user approval; original S2 and its exhausted two-iteration history remain recorded unchanged.
+- Code/test source commit: `5304c4d345a5b3b6624033873c436a12567dbcd6` (`Show salvage action deltas`). The action log now displays actual per-event `Cargo` and `Hull` deltas, including capped recovery `Cargo +0 / Hull +0`; it does not alter the canonical event schema or gameplay rules. The `h1` now uses a fixed `2.25rem` size with wrapping instead of viewport-scaled typography.
+- RED: the new focused UI test failed because `Cargo +2 / Hull -1` was absent from the original log. GREEN against `5304c4d345a5b3b6624033873c436a12567dbcd6`: `Ran 9 tests ... OK`.
+- Evidence command against the same source commit:
+
+  ```sh
+  PLAYWRIGHT_BROWSERS_PATH=/tmp/game-designer-browsers /tmp/game-designer-tools/bin/python prototypes/salvage/tests/capture_evidence.py
+  ```
+
+  Observed: desktop/mobile no overflow or console errors, unchanged render state, and the three terminal paths. Refreshed artifacts: `prototypes/salvage/evidence/desktop-initial.png`, `desktop-extracted.png`, and `mobile-initial.png`. `quick_validate.py .agents/skills/design-prototype` also reported `Skill is valid!`.

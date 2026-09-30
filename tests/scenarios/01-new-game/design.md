@@ -19,6 +19,12 @@ This is an authoring-time constructed exercise of `gameplay-design` and `system-
 | Core gameplay and prototype scope | confirmed | `SIMULATED USER APPROVAL S2, 2026-09-30: "Approve Latchline Salvage, the three-turn local prototype, zero spend, and at most two iterations."` | Fixture only |
 | Development Handoff Draft | pending | none | No simulated handoff approval supplied |
 
+## Simulated Approval History
+
+| Reference | Constructed input | Scope and provenance |
+| --- | --- | --- |
+| `S3` | `SIMULATED USER APPROVAL S3, 2026-09-30: permit one additional local zero-spend correction iteration for delta feedback, fixed typography and evidence traceability, no gameplay changes` | Authored test input supplied by the controller for this fixture, not an actual user approval. It authorizes only one additional finite local correction iteration after the original S2 maximum of two was exhausted. |
+
 ## Gameplay Proposal
 
 ### Core Loop
