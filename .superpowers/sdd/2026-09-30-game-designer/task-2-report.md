@@ -23,3 +23,11 @@
 - `Time limit` and browser architecture remain intentionally tentative pending developer confirmation. The fixture limits spending to `$0`, execution to local use, and prototype iterations to `2`.
 - The fixture has simulated results only. It does not claim Player Validation, fun, balance, or real-project approval.
 - Existing changes in `.scratch/game-designer/issues/` and `tests/behavior/` were left unmodified and excluded from the implementation commit.
+
+## Fix Round 1 Evidence (2026-09-30)
+
+- Reviewer findings addressed in `tests/scenarios/01-new-game/design.md`: Relay invalid inputs are now explicit no-ops with unchanged state and feedback; `S-05` and `R-09` define ordered post-resolution action events, reset clearing, terminal-event retention, and refresh behavior.
+- Added `V-04` for an invalid Relay input and `V-05` for restart/log reset. Updated `V-01` through `V-03` with event ordering and terminal-outcome expectations.
+- Re-ran `/tmp/game-designer-tools/bin/python /data/lea/.codex/skills/.system/skill-creator/scripts/quick_validate.py .agents/skills/gameplay-design` and `.agents/skills/system-design`: both returned `Skill is valid!`.
+- Re-ran relative Markdown link resolution: `markdown links: ok`; ran `git diff --check`: passed.
+- Recomputed canonical fixture cases: `V-01=(1, 5, extracted, 3, extracted)`, `V-02=(0, 6, lost, 3, hull-breach)`, `V-03=(4, 0, lost, 3, cargo-target-missed)`, `V-04=(3, 2, active, 1, section-resolved)`, and `V-05=(4, 0, active, 0, none)`.
