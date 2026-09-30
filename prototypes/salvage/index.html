@@ -1,0 +1,118 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Latchline Salvage</title>
+  <style>
+    :root { color-scheme: dark; --void: #10161a; --steel: #1c2d32; --panel: #263b40; --line: #5b7980; --signal: #e8c66c; --mint: #80d7bc; --danger: #ee866d; --ink: #eaf0e8; }
+    * { box-sizing: border-box; }
+    body { margin: 0; min-width: 320px; min-height: 100vh; background: var(--void); color: var(--ink); font-family: Georgia, "Times New Roman", serif; }
+    button { font: inherit; }
+    .bridge { width: min(1080px, 100%); min-height: 100vh; margin: 0 auto; padding: 24px; display: grid; grid-template-rows: auto 1fr auto; gap: 20px; background: linear-gradient(90deg, transparent 0 3%, rgba(128,215,188,.06) 3% 3.2%, transparent 3.2% 96.8%, rgba(128,215,188,.06) 96.8% 97%, transparent 97%); }
+    .masthead, .meter-row, .actions, .log-title { display: flex; align-items: center; justify-content: space-between; gap: 14px; }
+    .masthead { border-bottom: 1px solid var(--line); padding-bottom: 13px; }
+    h1, h2, p { margin: 0; }
+    h1 { font-size: clamp(1.55rem, 4vw, 2.45rem); font-weight: 400; letter-spacing: 0; }
+    .subtitle, .eyeline, .meter-label { font-family: Arial, sans-serif; font-size: .75rem; letter-spacing: 0; color: #b8cbca; }
+    .ship { display: grid; grid-template-columns: minmax(0, 1.35fr) minmax(260px, .65fr); gap: 20px; align-items: stretch; }
+    .viewport { position: relative; min-height: 390px; overflow: hidden; border: 1px solid var(--line); background: radial-gradient(circle at 50% 50%, #30454a 0 1px, transparent 2px) 0 0/52px 52px, linear-gradient(135deg, #152328, #0c1114); }
+    .wreck { position: absolute; width: min(74vw, 530px); aspect-ratio: 1.35; left: 50%; top: 50%; transform: translate(-50%, -50%); }
+    .wreck svg { width: 100%; height: 100%; filter: drop-shadow(0 0 18px rgba(128,215,188,.22)); }
+    .scan { position: absolute; left: 0; right: 0; top: 46%; border-top: 1px solid rgba(232,198,108,.65); box-shadow: 0 0 18px rgba(232,198,108,.5); animation: scan 3.6s ease-in-out infinite; }
+    @keyframes scan { 50% { transform: translateY(56px); opacity: .3; } }
+    .console { border: 1px solid var(--line); background: rgba(38,59,64,.72); display: grid; grid-template-rows: auto auto 1fr auto; }
+    .meter-row { padding: 14px; border-bottom: 1px solid var(--line); }
+    .meter { min-width: 0; }
+    .meter strong { display: block; font-family: Arial, sans-serif; font-size: 1.1rem; color: var(--signal); margin-top: 3px; }
+    .brief { padding: 22px 18px 12px; }
+    h2 { font-size: 1.65rem; font-weight: 400; margin-bottom: 8px; }
+    #latest-result { color: #c4d4d2; min-height: 2.8em; line-height: 1.4; }
+    .actions { padding: 14px 18px 18px; align-items: stretch; }
+    .action-set { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; flex: 1; }
+    .action { border: 1px solid var(--mint); background: transparent; color: var(--ink); padding: 12px 8px; cursor: pointer; min-height: 48px; }
+    .action:hover, .action:focus-visible { background: var(--mint); color: #112225; outline: 2px solid var(--signal); outline-offset: 2px; }
+    .action:disabled { border-color: #576a6d; color: #849596; cursor: not-allowed; }
+    .action:disabled:hover, .action:disabled:focus-visible { background: transparent; color: #849596; outline: none; }
+    .restart { width: 45px; border: 1px solid var(--signal); background: transparent; color: var(--signal); cursor: pointer; font-family: Arial, sans-serif; font-size: 1.35rem; }
+    .restart:hover, .restart:focus-visible { background: var(--signal); color: #24221c; outline: 2px solid var(--mint); outline-offset: 2px; }
+    .log { border-top: 1px solid var(--line); padding: 14px 0 0; }
+    .log-title { padding: 0 0 10px; }
+    .log h2 { font-size: 1.1rem; margin: 0; }
+    #terminal { min-height: 24px; color: var(--signal); text-align: right; }
+    #event-log { margin: 0; padding: 0; list-style: none; border-top: 1px solid rgba(91,121,128,.5); }
+    #event-log li { display: grid; grid-template-columns: 56px 1fr auto; gap: 8px; padding: 10px 0; border-bottom: 1px solid rgba(91,121,128,.35); color: #c6d8d5; }
+    .event-number { color: var(--signal); font-family: Arial, sans-serif; }
+    .result-extracted { color: var(--mint) !important; }
+    .result-lost { color: var(--danger) !important; }
+    @media (max-width: 720px) { .bridge { padding: 15px; gap: 15px; } .masthead { align-items: start; flex-direction: column; } .ship { grid-template-columns: 1fr; } .viewport { min-height: 265px; } .actions { flex-direction: row; } }
+    @media (prefers-reduced-motion: reduce) { .scan { animation: none; } }
+  </style>
+</head>
+<body>
+  <main class="bridge">
+    <header class="masthead">
+      <div><p class="eyeline">TETHER CONTROL / LOCAL SIMULATION</p><h1>Latchline Salvage</h1></div>
+      <p class="subtitle">Three sections. One hull. Extract five cargo.</p>
+    </header>
+    <section class="ship" aria-label="Salvage operation">
+      <div class="viewport" aria-hidden="true">
+        <div class="scan"></div>
+        <div class="wreck"><svg viewBox="0 0 600 440" role="img"><path d="M72 246 185 104 413 80 531 188 477 316 274 374 106 333Z" fill="#263b40" stroke="#80d7bc" stroke-width="5"/><path d="m185 104 93 130 135-154M106 333l172-99 199 82M278 234l-4 140M413 80l64 236" fill="none" stroke="#5b7980" stroke-width="8"/><circle cx="278" cy="234" r="41" fill="#e8c66c" opacity=".9"/><path d="M242 234h72M278 198v72" stroke="#152328" stroke-width="9"/><circle cx="144" cy="276" r="13" fill="#ee866d"/><circle cx="443" cy="235" r="13" fill="#ee866d"/></svg></div>
+      </div>
+      <section class="console" aria-live="polite">
+        <div class="meter-row"><div class="meter"><span class="meter-label">HULL INTEGRITY</span><strong id="hull">Hull: 4/4</strong></div><div class="meter"><span class="meter-label">SALVAGE CARGO</span><strong id="cargo">Cargo: 0</strong></div></div>
+        <div class="brief"><p class="eyeline">CURRENT WRECK SECTION</p><h2 id="section-name">Cargo Hold</h2><p id="latest-result">No actions resolved. Choose an approach.</p></div>
+        <div class="actions"><div class="action-set" id="action-set"></div><button class="restart" type="button" aria-label="Restart run" title="Restart run">&#8635;</button></div>
+      </section>
+    </section>
+    <section class="log" aria-label="Action log"><div class="log-title"><h2>Action log</h2><p id="terminal"></p></div><ol id="event-log"></ol></section>
+  </main>
+  <script src="salvage-rules.js"></script>
+  <script>
+    (function () {
+      var sections = { 1: "Cargo Hold", 2: "Relay", 3: "Reactor" };
+      var state = window.LatchlineRules.startRun();
+      var actionSet = document.getElementById("action-set");
+      var terminal = document.getElementById("terminal");
+      var log = document.getElementById("event-log");
+
+      function resultText(event) {
+        if (!event) return "No actions resolved. Choose an approach.";
+        if (event.outcome === "hull-breach") return "Hull breach: run lost.";
+        if (event.outcome === "extracted") return "Extraction successful.";
+        if (event.outcome === "cargo-target-missed") return "Cargo target missed: run lost.";
+        if (event.action === "Stabilize") return event.hull === 4 ? "Relay stabilized. Hull is at its cap." : "Relay stabilized. Hull recovered.";
+        return event.action + " resolved. Hull " + event.hull + ", cargo " + event.cargo + ".";
+      }
+
+      function render() {
+        document.getElementById("hull").textContent = "Hull: " + state.hull + "/4";
+        document.getElementById("cargo").textContent = "Cargo: " + state.cargo;
+        document.getElementById("section-name").textContent = state.status === "active" ? sections[state.section] : "Run complete";
+        var latest = state.events[state.events.length - 1];
+        document.getElementById("latest-result").textContent = resultText(latest);
+        terminal.textContent = state.status === "extracted" ? "Extraction successful" : state.status === "lost" ? (latest.outcome === "hull-breach" ? "Hull breach: run lost" : "Cargo target missed: run lost") : "";
+        terminal.className = state.status === "extracted" ? "result-extracted" : state.status === "lost" ? "result-lost" : "";
+        actionSet.replaceChildren();
+        window.LatchlineRules.legalActions(state.section).forEach(function (action) {
+          var button = document.createElement("button");
+          button.type = "button"; button.className = "action"; button.textContent = action; button.disabled = state.status !== "active";
+          button.addEventListener("click", function () { state = window.LatchlineRules.applyAction(state, action); render(); });
+          actionSet.appendChild(button);
+        });
+        log.replaceChildren();
+        state.events.forEach(function (event) {
+          var item = document.createElement("li");
+          item.innerHTML = "<span class=\"event-number\">" + event.order + "</span><span>" + sections[event.section] + ": " + event.action + "</span><span>H " + event.hull + " / C " + event.cargo + "</span>";
+          log.appendChild(item);
+        });
+      }
+
+      document.querySelector(".restart").addEventListener("click", function () { state = window.LatchlineRules.startRun(); render(); });
+      window.LatchlineSalvage = { render: render, getState: function () { return JSON.parse(JSON.stringify(state)); } };
+      render();
+    }());
+  </script>
+</body>
+</html>

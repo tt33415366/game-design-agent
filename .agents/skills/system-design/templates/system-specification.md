@@ -31,9 +31,11 @@ Other documents refer to rule IDs in this specification and do not restate their
 
 ## Verification Cases
 
-| Case | Initial state | Inputs in order | Expected rule IDs and final state | Evidence classification |
+| Case | Initial state | Inputs in order | Expected rule IDs and final state | Execution status and evidence |
 | --- | --- | --- | --- | --- |
-| `V-<id>` | `<state>` | `<inputs>` | `<deterministic result>` | `rule verification | simulated result` |
+| `V-<id>` | `<state>` | `<inputs>` | `<deterministic expected result>` | `not run / expected outcome; retain simulated labels where applicable` |
+
+Planned cases are specifications, not executed rule-verification evidence. Promote a case only with the actual command or input, observed output, artifact or log path, and version.
 
 ## Unvalidated Claims and Handoff Notes
 

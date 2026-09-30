@@ -6,7 +6,7 @@ Use this contract for game-design work. It supports independent developers and s
 
 For a new project, confirm the document language. Read the project record and its authoritative documents before resuming an existing project. Each rule has one authoritative definition; reference it elsewhere rather than restating a competing version.
 
-Classify every statement as a sourced fact, Design Assumption, rule-verification result, simulated result, or Player Validation. Reasoning and rule verification do not establish player experience. Preserve negative evidence.
+Classify every statement as a sourced fact, Design Assumption, rule-verification result, simulated result, or Player Validation. Planned verification cases and expected results are `not run`, not rule-verification evidence. Promote a case only after recording the actual command or input, observed output, artifact or log path, and version. Reasoning and rule verification do not establish player experience. Preserve negative evidence.
 
 Ask only for missing information that changes design direction: target players, core experience, platform, team capabilities, time budget, or existing constraints. Use a labeled assumption only for a low-risk detail that can be revised without changing those decisions. Challenge contradictions with their affected rules, scope, and cost before seeking a decision.
 
@@ -31,7 +31,7 @@ Read this contract before direct invocation of any skill. `design-intake` has no
 | New idea, unclear constraints, or an existing-project brief | `design-intake` | Available now |
 | Core loops, mechanics, and alternatives | [`gameplay-design`](../.agents/skills/gameplay-design/SKILL.md) | Available now; requires a confirmed Design Brief |
 | Rules, parameters, levels, and player feedback | [`system-design`](../.agents/skills/system-design/SKILL.md) | Available now; requires confirmed Design Brief and core gameplay/prototype scope |
-| Validation plan, local prototype, and evidence | `design-prototype` | Planned route |
+| Validation plan, local prototype, and evidence | [`design-prototype`](../.agents/skills/design-prototype/SKILL.md) | Available now; requires confirmed Design Brief and core gameplay/prototype scope |
 | Consistency, risks, and handoff readiness | `design-review` | Planned route |
 | Approved-change impact and synchronization | `design-change` | Planned route |
 
