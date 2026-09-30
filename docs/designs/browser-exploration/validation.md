@@ -76,7 +76,9 @@ Verification (root-run, downgraded independence — the delegated worker subagen
 - Real-browser smoke: player pushed the log to a locked plank and walked across to the east bank (x=2035) with zero page/console errors; all three reveals fired exactly once with flavor text; screenshots `v2-log-plank.png`, `v2-{tower,crossing,grove}-reveal.png` under `prototypes/valley/tests/evidence/`.
 - Debug trail preserved: three push-follow iterations and a narrows-sizing correction (log height < narrows height) were needed; these are recorded as execution errors, not instruction gaps.
 
-Player Validation for v2: not performed. The validation question (per F6) awaits the user's unassisted first play: does the user investigate a landmark unprompted, and after the first reveal, voluntarily seek another landmark?
+Player Validation for v2: **U5 report (2026-09-30 09:50 UTC)**. After an unassisted first play, asked "did you investigate a landmark unprompted, and after the first reveal did you voluntarily seek another?", the user answered "Yes, it does." Both F6 signals are affirmed: initial attraction (unprompted investigation) and sustained interest (seeking another landmark after the first payoff). This is the first time in this project that sustained interest is evidenced rather than assumed. Classification: Player Validation, desirability, single first-evaluator user; "yes" does not quantify strength, and does not generalize beyond this user.
+
+Decision per the v2 plan's stop criterion (stop if the user does NOT seek a second landmark after the first reveal): the stop condition is **not** met. The direction survives this validation round. This does not authorize further implementation, expansion, or handoff — those require their own explicit confirmation.
 
 ### Side-Conversation Directive (2026-09-30, user-approved)
 
