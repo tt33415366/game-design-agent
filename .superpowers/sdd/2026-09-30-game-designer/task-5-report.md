@@ -46,3 +46,10 @@
 | Scenario command in `tests/README.md` | Passed: `constructed scenario checks passed`. It now checks the untrusted historical C1 annotation and v1.1 V-12 Hull `1` / Cargo `2` fields. |
 | `/tmp/game-designer-tools/bin/python /data/lea/.codex/skills/.system/skill-creator/scripts/quick_validate.py .agents/skills/design-change` | Passed: `Skill is valid!` |
 | `git diff --check` and local Markdown-reference check | Passed with no whitespace output; `local reference targets exist`. |
+
+## Re-Review: Fix Round 2
+
+- Scope reviewed: `git diff 2c769f8..af872fb` only; no independent behavior evaluation was performed in this review.
+- Result: accepted. `V-12` now recomputes `Start, Anchor, Recover` from v1.1 ordered transitions as `Hull=1`, `Cargo=2`, `Status=active`.
+- The raw C1 fixture remains historical input. Its reported v1.0 Hull value is retained and separately labeled an untrusted historical simulation because it contradicts the recorded v1.0 transitions; its reward-dependent result remains invalidated by v1.1.
+- The reusable `design-change` instruction requires replacement expected states to be recomputed from active ordered transitions rather than copied from prior results. No new material defect was found in this scoped re-review.

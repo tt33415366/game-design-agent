@@ -4,11 +4,10 @@
 
 **Blocked by:** 02: Turn a Design Brief into actionable gameplay and system rules.
 
-**Status:** ready-for-agent
+**Status:** complete
 
-- [ ] Design-review owns a reusable review and handoff template.
-- [ ] The existing-design extension scenario is actually exercised with retained input, output, and checks.
-- [ ] Contradictory or unimplementable critical rules block readiness.
-- [ ] Missing player testing is distinguished from failed rule verification and need not block a qualified handoff.
-- [ ] Reviews preserve scope, reference authoritative rules, identify developer dependencies, and request handoff confirmation.
-
+- [x] Design-review owns a reusable review and handoff template.
+- [x] The existing-design extension scenario is actually exercised with retained input, output, and checks.
+- [x] Contradictory or unimplementable critical rules block readiness.
+- [x] Missing player testing is distinguished from failed rule verification and need not block a qualified handoff.
+- [x] Reviews preserve scope, reference authoritative rules, identify developer dependencies, and request handoff confirmation.

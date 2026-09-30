@@ -4,11 +4,10 @@
 
 **Blocked by:** 03: Build a playable prototype and retain honest validation evidence; 04: Extend an existing system and review the development handoff.
 
-**Status:** ready-for-agent
+**Status:** complete
 
-- [ ] Design-change owns change-impact and concise change-history templates.
-- [ ] The third scenario exercises a conflicting requirement and a labeled injected prototype failure.
-- [ ] Local tuning within scope is distinguished from core-rule changes requiring renewed confirmation.
-- [ ] Approved changes update rule definitions and invalidate dependent evidence and approvals where necessary.
-- [ ] All three acceptance scenarios retain actual inputs, outputs, and checks; constructed evidence is never represented as real player feedback.
-
+- [x] Design-change owns change-impact and concise change-history templates.
+- [x] The third scenario exercises a conflicting requirement and a labeled injected prototype failure.
+- [x] Local tuning within scope is distinguished from core-rule changes requiring renewed confirmation.
+- [x] Approved changes update rule definitions and invalidate dependent evidence and approvals where necessary.
+- [x] All three acceptance scenarios retain actual inputs, outputs, and checks; constructed evidence is never represented as real player feedback.
