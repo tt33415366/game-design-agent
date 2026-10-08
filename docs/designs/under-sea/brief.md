@@ -4,7 +4,7 @@ Date: 2026-10-08. Document language: English (inherits the user's established pr
 
 ## Project Record
 
-- Current stage: system-design for Candidate A (Sunlight Shelf); combined core-gameplay/prototype-scope checkpoint confirmed 2026-10-08 02:29 UTC (user selected "A" in reply to the proposal carrying a 2-hour / 1-iteration / zero-spend budget; absolute stop 04:29:28 UTC).
+- Current stage: Candidate A validated at iteration 1 (U1 Player Validation, 2026-10-08 02:50 UTC: initial attraction, sustained interest, and crevice temptation all affirmed). Awaiting user decision on whether to continue, expand, or stop; no further implementation authorized.
 - Authoritative documents: this brief. System rules: none yet. Prototype: none yet.
 - Checkpoints: Design Brief `confirmed` (2026-10-08); core gameplay/prototype scope `confirmed` (2026-10-08, Candidate A + 2h/1-iteration/zero-spend); Development Handoff `pending`.
 - Prior project: [browser-exploration](../browser-exploration/brief.md) (Unmarked Valley) — direction validated at v2 and paused; evidence and workflow lessons carry over as references only, not as approvals.

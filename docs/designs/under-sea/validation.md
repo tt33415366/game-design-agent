@@ -23,4 +23,6 @@ Verification evidence:
 
 ### Player Validation
 
-Not performed. Awaiting the user's unassisted first play per F8.
+**U1 report (2026-10-08 02:50 UTC).** After an unassisted first play, asked the three F6/F8 questions (unprompted investigation; sought another sight after the first reveal; did the crevice tempt), the user answered "All is a yes." All three signals affirmed: initial attraction, sustained interest, and pressure-pocket temptation. Classification: Player Validation, desirability, single first-evaluator user; binary answers do not quantify strength and do not generalize.
+
+Decision: Candidate A survives its first validation round. Per the checkpoint boundary, this does not authorize further implementation, expansion, or handoff — each requires its own explicit confirmation. This is also the first post-harvest real-project data point: the F6 two-signal validation question and the F8 unassisted-first protocol were both applied as instructed and produced usable evidence, which counts in favor of the harvest diffs actually changing workflow behavior (instruction-level, not a guarantee).
