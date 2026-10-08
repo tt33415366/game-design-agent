@@ -122,3 +122,7 @@ Scope: Three Stones U1-U4, Echo Caves U1-U2, and implementation/verification rec
 ## Application Record
 
 F9-F16 were applied 2026-10-08 after the user's approval. Files touched: `agents/game-designer.md`, `.agents/skills/gameplay-design/SKILL.md` + gameplay-proposal template, `.agents/skills/system-design/SKILL.md` + system-specification template, and `.agents/skills/design-prototype/SKILL.md` + validation-plan/evidence-log templates. The changes are additive and do not alter approval checkpoints. They require future behavioral validation; documentation compliance alone is not evidence that a future agent will apply them correctly.
+
+## Quick Retrospective Acceptance (2026-10-08)
+
+The user accepted the session retrospective. Keep extracting rules from direct player feedback and applying them to the contract, skills, and templates together. Improve by running a controlled behavior-acceptance exercise before beginning another concept. Start an instruction-only exercise that tests opportunity promise, authorship, pressure semantics, interaction-path evidence, and evidence strength. Stop treating relative improvement or restored access as experience success. The next action is an unimplemented, self-validated behavior-acceptance case; independent review remains deferred.
