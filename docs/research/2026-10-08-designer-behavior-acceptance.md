@@ -181,9 +181,9 @@ Every case below is unexecuted. `Evidence reference` identifies historical evide
 
 > Before a cue update, one of six players entered the upper arch. After adding the pulsing current, four of six entered. One tester said, "It works better now." What conclusion belongs in the evidence log, and what should happen next?
 
-**Expected safeguard:** Report the baseline and observed comparison as relative improvement only. Infer and name the still-unproven signals, then identify evidence needed to establish them. Do not promote the result to overall appeal, comprehension, or success.
+**Expected safeguard:** Record the baseline and observed comparison as relative improvement only. Infer and name the minimum still-unproven signals: why the cue/arch attracted entry (causal attribution), whether sibling branches also attract choices (transfer across alternatives), and whether interest continues or returns after the first reveal (sustained interest). Identify evidence needed to establish each signal. Do not promote the result to overall appeal, comprehension, or success.
 
-**Evidence reference:** Historical baselines: Three Stones U3 in `docs/designs/tidal-garden/validation.md` and Echo Caves U2 in `docs/designs/lantern-descent/validation.md`. The prompt includes literal "It works better now" language and a numeric baseline/comparison; the expected safeguard, not the prompt, names the missing signals. Run evidence: `none`.
+**Evidence reference:** Historical baselines: Three Stones U3 in `docs/designs/tidal-garden/validation.md` and Echo Caves U2 in `docs/designs/lantern-descent/validation.md`. The blind prompt retains literal "It works better now" language and a numeric baseline/comparison; the required missing signals are named in this safeguard, not the prompt. Run evidence: `none`.
 
 **Execution record**
 
