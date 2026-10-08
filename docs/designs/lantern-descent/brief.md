@@ -4,7 +4,7 @@ Date: 2026-10-08. This is the next prototype exercise after the failed Three Sto
 
 ## Project Record
 
-- Current stage: system-design / prototype for Candidate B (Echo Caves); combined core-gameplay/prototype-scope checkpoint confirmed 2026-10-08 06:55 UTC (user "Accepted" selected B and the proposed 2-hour / 1-iteration / zero-spend budget; absolute stop 08:55:15 UTC).
+- Current stage: bounded cue revision for Echo Caves. U1 found atmospheric pressure and payoff-driven continuation, but weak entrance cues. User approved a new 1-hour / 1-iteration / zero-spend revision at 08:18 UTC; absolute stop 09:18:32 UTC. Impact: [change-impact-2026-10-08-cue-revision.md](change-impact-2026-10-08-cue-revision.md).
 - Checkpoints: Design Brief `confirmed` (2026-10-08); core gameplay/prototype scope `confirmed` (2026-10-08, Candidate B + 2h/1-iteration/zero-spend); Development Handoff `pending`.
 - Structure under test: descend into a pressure space, choose when to turn back, surface with a reveal; repeat only if the next descent feels worth the risk.
 - Prior evidence: Sunlight Shelf validated free exploration + arrival payoff; Three Stones rejected access-only authorship. Those are references, not approvals for this project.

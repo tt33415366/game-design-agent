@@ -24,3 +24,11 @@ Interpretation by F6 signals:
 - Pressure reading: **pass**. Darkness/narrowing read as atmosphere, not forced resource management.
 
 Decision: **revise**, not stop. The risk-and-release structure has evidence of potential, but the cue/reward chain is weak at the entrance. Do not expand the cave or add more branches yet; a future revision should first make branch promises legible and specific, then retest whether the player enters because of the cue rather than only because the previous branch happened to pay off. This validation used the full approved 2-hour / 1-iteration budget; any revision requires a new scope and budget checkpoint.
+
+### Cue Revision (approved 2026-10-08 08:18 UTC)
+
+Bounded revision: strengthen the existing three branch entrances only, with no new branch, map, mechanic, dependency, or content system. The warm branch now visibly pulses with bioluminescent orbs; the drift branch shows directional particles and current; the shadow branch shows a moving silhouette. Existing endpoint reveals remain unchanged.
+
+Verification: 3 tests pass; final browser smoke entered the Warm Glow branch, triggered its reveal, returned to the surface, and reported zero page/console errors. Evidence: `prototypes/echo-caves/tests/evidence/surface.png` and `glow-reveal.png` (updated revision captures).
+
+Player Validation after the cue revision: not performed. The next unassisted play should test whether the revised entrance cues create initial attraction before interpreting the earlier partial sustained-interest result.
