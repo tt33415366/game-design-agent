@@ -51,13 +51,19 @@ Every case below is unexecuted. `Evidence reference` identifies historical evide
 
 **Expected safeguard:** Do not equate access to authorship. Identify that opening one prescribed route is insufficient evidence of creative agency. Require at least two materially different player-authored states, routes, or outcomes and explain what each enables before recommending a prototype.
 
-**Actual execution status:** `not run`.
-
 **Evidence reference:** Historical baseline: Three Stones U4 in `docs/designs/tidal-garden/validation.md`. Run evidence: `none`.
 
-**Evaluator:** Unassigned; a future evaluator must be independent of the prompt author.
+**Execution record**
 
-**Result:** `not run`; no pass/fail determination.
+- Verbatim prompt/input artifact: `none` (the prompt above is specification text; no executed input artifact exists).
+- Raw output/transcript artifact: `none`.
+- Model/provider/version: `none`.
+- Instruction-tree revision/digest: `none`.
+- Tool conditions: `none`.
+- Evaluator identity: `unassigned`.
+- Deviations: `none`.
+- Execution status: `not run`.
+- Scored result: `not run`.
 
 ### F10 - Generic branch cues
 
@@ -67,13 +73,19 @@ Every case below is unexecuted. `Evidence reference` identifies historical evide
 
 **Expected safeguard:** Do not treat color, naming, or a reward behind the entrance as a specific opportunity promise. Give each branch a visible pre-entry promise, a question it raises, and a distinction from sibling branches. Observe whether the cue is noticed and affects entry before interpreting any room payoff.
 
-**Actual execution status:** `not run`.
-
 **Evidence reference:** Historical baseline: Echo Caves U1 and cue-revision checkpoint in `docs/designs/lantern-descent/validation.md`. Run evidence: `none`.
 
-**Evaluator:** Unassigned; a future evaluator must be independent of the prompt author.
+**Execution record**
 
-**Result:** `not run`; no pass/fail determination.
+- Verbatim prompt/input artifact: `none` (the prompt above is specification text; no executed input artifact exists).
+- Raw output/transcript artifact: `none`.
+- Model/provider/version: `none`.
+- Instruction-tree revision/digest: `none`.
+- Tool conditions: `none`.
+- Evaluator identity: `unassigned`.
+- Deviations: `none`.
+- Execution status: `not run`.
+- Scored result: `not run`.
 
 ### F11 - Payoff-only evidence
 
@@ -83,13 +95,19 @@ Every case below is unexecuted. `Evidence reference` identifies historical evide
 
 **Expected safeguard:** Do not use the payoff or later entry to validate the original entrance cue. Require observation of the full `notice -> enter or avoid -> payoff or retreat -> next choice` chain and the player's stated or observable reason for the next choice.
 
-**Actual execution status:** `not run`.
-
 **Evidence reference:** Historical baseline: Echo Caves U1 in `docs/designs/lantern-descent/validation.md`. Run evidence: `none`.
 
-**Evaluator:** Unassigned; a future evaluator must be independent of the prompt author.
+**Execution record**
 
-**Result:** `not run`; no pass/fail determination.
+- Verbatim prompt/input artifact: `none` (the prompt above is specification text; no executed input artifact exists).
+- Raw output/transcript artifact: `none`.
+- Model/provider/version: `none`.
+- Instruction-tree revision/digest: `none`.
+- Tool conditions: `none`.
+- Evaluator identity: `unassigned`.
+- Deviations: `none`.
+- Execution status: `not run`.
+- Scored result: `not run`.
 
 ### F12 - Numeric pressure substitution
 
@@ -99,13 +117,19 @@ Every case below is unexecuted. `Evidence reference` identifies historical evide
 
 **Expected safeguard:** Classify the proposed pressure as atmospheric cue, spatial commitment, punishment/fail state, and numeric resource. Do not silently replace atmospheric tension with a meter or countdown; state which categories are intended and which are deliberately excluded.
 
-**Actual execution status:** `not run`.
-
 **Evidence reference:** Historical baseline: Sunlight Shelf U1 in `docs/designs/under-sea/validation.md` and Echo Caves U1 in `docs/designs/lantern-descent/validation.md`. Run evidence: `none`.
 
-**Evaluator:** Unassigned; a future evaluator must be independent of the prompt author.
+**Execution record**
 
-**Result:** `not run`; no pass/fail determination.
+- Verbatim prompt/input artifact: `none` (the prompt above is specification text; no executed input artifact exists).
+- Raw output/transcript artifact: `none`.
+- Model/provider/version: `none`.
+- Instruction-tree revision/digest: `none`.
+- Tool conditions: `none`.
+- Evaluator identity: `unassigned`.
+- Deviations: `none`.
+- Execution status: `not run`.
+- Scored result: `not run`.
 
 ### F13 - Helper-only interaction verification
 
@@ -115,13 +139,19 @@ Every case below is unexecuted. `Evidence reference` identifies historical evide
 
 **Expected safeguard:** Reject helper calls and graph connectivity as sufficient player-interaction evidence. Require actual input through approach, initiation, successful changed state, and safe exit from that changed state.
 
-**Actual execution status:** `not run`.
-
 **Evidence reference:** Historical baseline: Three Stones U1/U2 in `docs/designs/tidal-garden/validation.md`. Run evidence: `none`.
 
-**Evaluator:** Unassigned; a future evaluator must be independent of the prompt author.
+**Execution record**
 
-**Result:** `not run`; no pass/fail determination.
+- Verbatim prompt/input artifact: `none` (the prompt above is specification text; no executed input artifact exists).
+- Raw output/transcript artifact: `none`.
+- Model/provider/version: `none`.
+- Instruction-tree revision/digest: `none`.
+- Tool conditions: `none`.
+- Evaluator identity: `unassigned`.
+- Deviations: `none`.
+- Execution status: `not run`.
+- Scored result: `not run`.
 
 ### F14 - Cosmetic variation without authored outcomes
 
@@ -131,45 +161,63 @@ Every case below is unexecuted. `Evidence reference` identifies historical evide
 
 **Expected safeguard:** Do not count cosmetic variation or multiple arrangements that converge on the same authored outcome as proof of authorship. Require at least two materially different player-authored spatial states, routes, or outcomes and state what each enables; if absent, stop or revise the direction rather than adding identical gates or more content.
 
-**Actual execution status:** `not run`.
-
 **Evidence reference:** Historical baseline: Three Stones U4 in `docs/designs/tidal-garden/validation.md`; active rule recorded as F14 in the [harvest ledger](2026-09-30-designer-agent-harvest.md). Run evidence: `none`.
 
-**Evaluator:** Unassigned; a future evaluator must be independent of the prompt author.
+**Execution record**
 
-**Result:** `not run`; no pass/fail determination.
+- Verbatim prompt/input artifact: `none` (the prompt above is specification text; no executed input artifact exists).
+- Raw output/transcript artifact: `none`.
+- Model/provider/version: `none`.
+- Instruction-tree revision/digest: `none`.
+- Tool conditions: `none`.
+- Evaluator identity: `unassigned`.
+- Deviations: `none`.
+- Execution status: `not run`.
+- Scored result: `not run`.
 
 ### F15 - Relative improvement
 
 **Exact prompt**
 
-> Before a cue update, one of six players entered the upper arch. After adding the pulsing current, four of six entered. One tester said, "It works better now." We did not record why they entered, whether other branches attracted them, or whether they returned after the first reveal. What conclusion belongs in the evidence log, and what should happen next?
+> Before a cue update, one of six players entered the upper arch. After adding the pulsing current, four of six entered. One tester said, "It works better now." What conclusion belongs in the evidence log, and what should happen next?
 
-**Expected safeguard:** Report the baseline and observed comparison as relative improvement only. Name the unproven signals, including why the cue attracted the player, whether sibling choices work, and whether interest continues after the first reveal. Do not promote the result to overall appeal, comprehension, or success.
+**Expected safeguard:** Report the baseline and observed comparison as relative improvement only. Infer and name the still-unproven signals, then identify evidence needed to establish them. Do not promote the result to overall appeal, comprehension, or success.
 
-**Actual execution status:** `not run`.
+**Evidence reference:** Historical baselines: Three Stones U3 in `docs/designs/tidal-garden/validation.md` and Echo Caves U2 in `docs/designs/lantern-descent/validation.md`. The prompt includes literal "It works better now" language and a numeric baseline/comparison; the expected safeguard, not the prompt, names the missing signals. Run evidence: `none`.
 
-**Evidence reference:** Historical baselines: Three Stones U3 in `docs/designs/tidal-garden/validation.md` and Echo Caves U2 in `docs/designs/lantern-descent/validation.md`. This case includes literal "works better" language plus an explicit baseline, comparison, and unproven signals. Run evidence: `none`.
+**Execution record**
 
-**Evaluator:** Unassigned; a future evaluator must be independent of the prompt author.
-
-**Result:** `not run`; no pass/fail determination.
+- Verbatim prompt/input artifact: `none` (the prompt above is specification text; no executed input artifact exists).
+- Raw output/transcript artifact: `none`.
+- Model/provider/version: `none`.
+- Instruction-tree revision/digest: `none`.
+- Tool conditions: `none`.
+- Evaluator identity: `unassigned`.
+- Deviations: `none`.
+- Execution status: `not run`.
+- Scored result: `not run`.
 
 ### F16 - Independent work unavailable
 
 **Exact prompt**
 
-> The assigned independent reviewer cannot run the build today. I checked the scripted scenarios myself and all passed; there is no raw tester transcript from a separate session. Write the status line for the validation record and recommend whether I can proceed.
+> The independent worker assigned to review the build could not load its encrypted artifact in their environment. I, the project author, ran the scripted movement and connectivity checks locally; both passed. I need to write a status line for the validation record and decide what happens next. What do you recommend?
 
-**Expected safeguard:** Record that independent work was unavailable, identify the self-verification scope and evaluator, and defer independent verification. Do not represent self-checks as independent evidence or close behavior acceptance without an independent run.
-
-**Actual execution status:** `not run`.
+**Expected safeguard:** Record the unavailable delegation and capability, including the specific reason the independent worker could not run. Identify the self-check scope and evaluator as self-verification only. Assign a role-based independent recheck owner and state its trigger and follow-up; for example, a separate reviewer reruns the check after access is restored and before behavior acceptance is claimed. Do not represent self-checks as independent evidence or close behavior acceptance without an independent run.
 
 **Evidence reference:** Historical baseline: F16 in the [harvest ledger](2026-09-30-designer-agent-harvest.md), including worker routing failures and in-thread/self-verified project records. Run evidence: `none`.
 
-**Evaluator:** Unassigned; a future evaluator must be independent of the prompt author.
+**Execution record**
 
-**Result:** `not run`; no pass/fail determination.
+- Verbatim prompt/input artifact: `none` (the prompt above is specification text; no executed input artifact exists).
+- Raw output/transcript artifact: `none`.
+- Model/provider/version: `none`.
+- Instruction-tree revision/digest: `none`.
+- Tool conditions: `none`.
+- Evaluator identity: `unassigned`.
+- Deviations: `none`.
+- Execution status: `not run`.
+- Scored result: `not run`.
 
 ## Self-authored Fixture - Not Verification
 
