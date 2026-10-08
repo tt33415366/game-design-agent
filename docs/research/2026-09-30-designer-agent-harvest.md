@@ -61,3 +61,14 @@ Date: 2026-09-30. Scope: findings from the salvage prototype, the Unmarked Valle
 ## Application Record
 
 All eight diffs applied 2026-09-30 after the user's "All" approval. Files touched: `agents/game-designer.md`, `.agents/skills/system-design/SKILL.md`, `.agents/skills/design-prototype/SKILL.md` + validation-plan template, `.agents/skills/gameplay-design/SKILL.md` + gameplay-proposal template. No checkpoints, approvals, or project records changed. Instruction compliance is not guaranteed by these edits; the next behavioral exercise (e.g. the experience-selection scenarios) can check whether the new instructions change outputs.
+
+## B-Structure Harvest (2026-10-08)
+
+### F9. Accessibility is not authorship
+
+- Evidence: Three Stones U1/U2/U3/U4 in [tidal-garden/validation.md](../designs/tidal-garden/validation.md). Two geometry defects were fixed: first the stones were unreachable, then a successful mid-stone push trapped the player. After both fixes the user reported: "It only makes it accessible, not creative." The operation opened a pre-authored route but did not create materially different routes, spatial states, or outcomes.
+- Classification: **skill gap** (gameplay-design) + **template gap** (validation-plan).
+- Proposed diff: `gameplay-design/SKILL.md` should require every agency/build mechanic to state what player-authored state differs after each choice and what alternative outcome becomes possible; "opens access" alone is not sufficient evidence of authorship. `design-prototype/templates/validation-plan.md` should add an evidence row: `authorship vs access` — ask whether the player can describe a route/space/result as their own creation, not merely as a route they unlocked.
+- Decision rule: if the user reports access without authorship, stop the direction as-is. Do not respond by adding more identical interactables or content; revise the mechanic so choices produce materially different routes or consequences, then seek a new scope/budget checkpoint.
+
+This is a **proposal**, not yet applied. It is the first harvest item explicitly derived from a failed structural hypothesis rather than a runtime or presentation defect.
