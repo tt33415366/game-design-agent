@@ -1,0 +1,6 @@
+(function(root){"use strict";
+const MAX=150,ACCEL=700,DRAG=3.2,RADIUS=10,CAP=.25,STEP=.05,STEP_MAX=4;
+function inputVector(k){let x=(k.ArrowRight||k.KeyD?1:0)-(k.ArrowLeft||k.KeyA?1:0),y=(k.ArrowDown||k.KeyS?1:0)-(k.ArrowUp||k.KeyW?1:0);if(x&&y){x*=Math.SQRT1_2;y*=Math.SQRT1_2;}return{x,y};}
+function move(p,k,elapsed,w){const d=inputVector(k),n={...p};let rem=Math.min(Math.max(elapsed||0,0),CAP);while(rem>0){const dt=Math.min(STEP,rem);rem-=dt;n.vx=(n.vx||0)+d.x*ACCEL*dt;n.vy=(n.vy||0)+d.y*ACCEL*dt;const f=Math.max(0,1-DRAG*dt);n.vx*=f;n.vy*=f;if(Math.hypot(n.vx,n.vy)<.5){n.vx=0;n.vy=0;}const sp=Math.hypot(n.vx,n.vy);if(sp>MAX){n.vx*=MAX/sp;n.vy*=MAX/sp;}const dx=n.vx*dt,dy=n.vy*dt,steps=Math.max(1,Math.ceil(Math.max(Math.abs(dx),Math.abs(dy))/STEP_MAX));for(let i=0;i<steps;i++){const sx=dx/steps,sy=dy/steps;if(!w.blockedAt(n.x+sx,n.y,RADIUS))n.x+=sx;else n.vx=0;if(!w.blockedAt(n.x,n.y+sy,RADIUS))n.y+=sy;else n.vy=0;}}if(Math.hypot(n.vx||0,n.vy||0)>12)n.facing=Math.abs(n.vx)>Math.abs(n.vy)?(n.vx>0?"east":"west"):(n.vy>0?"south":"north");return n;}
+function reset(w){return{x:w.spawn.x,y:w.spawn.y,facing:w.spawn.facing,vx:0,vy:0};}
+root.EchoRules={MAX,ACCEL,DRAG,RADIUS,CAP,STEP,STEP_MAX,inputVector,move,reset};})(globalThis);
