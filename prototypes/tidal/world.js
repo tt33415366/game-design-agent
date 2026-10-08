@@ -23,8 +23,9 @@
     blockers: [
       // Reef rock scattered on the flat (always solid).
       ...[[200,180,28],[400,220,26],[600,150,30],[900,180,28],[1200,150,26],[1500,200,30],[1800,160,28],[1900,400,26],[1800,600,30],[1900,900,28],[1800,1300,26],[1600,1400,30],[1200,1420,26],[800,1400,30],[400,1420,28],[150,1200,26],[180,900,30],[150,500,28]].map((p)=>circle(p[0],p[1],p[2],"reef")),
-      // Channel side-walls drawn as thin rock strips between channels (leave channel rects open).
-      rect(300, 390, 1300, 26, "wall"), rect(300, 674, 1300, 26, "wall"), rect(300, 790, 1300, 26, "wall"), rect(300, 1074, 1300, 26, "wall")
+      // Divider walls sit in the gaps BETWEEN channels, never touching a channel mouth.
+      // Channels: north 300-390, mid 700-790, south 1100-1190.
+      rect(300, 545, 1300, 26, "wall"), rect(300, 945, 1300, 26, "wall")
     ],
     grassTiles: [[250,300],[560,900],[980,560],[1400,900],[700,1240],[1650,500],[450,1240],[1250,1240]]
   };

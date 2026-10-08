@@ -26,3 +26,7 @@ Root cause: design error — stone home == blockedSeg center. Fixed by relocatin
 This is exactly the F1/F4 affordance-honesty class of bug the harvest was meant to catch earlier — flagged as a process note: the drawn-vs-collidable and reachability checks passed, but the *interaction reachability* (can the player physically touch the draggable) was not a planned check. Candidate harvest follow-up: add an "interactable must be reachable" probe to the validation plan template.
 
 Awaiting the user's re-test.
+
+**U2 defect report (2026-10-08):** Pushing the mid stone, the blocked segment disappeared as expected but the player became stuck between the snapped stone and a divider wall. Root cause: a permanent divider wall (y 674-700) sat flush against the mid channel's mouth (700-790), trapping the player in a 24px pocket once the segment opened. Classification: Player Validation (geometry/affordance defect), negative evidence preserved. Fixed by moving divider walls into the gaps between channels (y 545, 945), clear of every channel mouth. Verified: player no longer stuck after the snap (`blockedNow: false`), 6/6 suite, full smoke clean.
+
+Process note: this is the same interactable-reachability / affordance class as U1, reinforcing the candidate harvest follow-up (add "interactable must be reachable and its success state must not trap the player" to the validation plan template).
