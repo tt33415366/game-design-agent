@@ -32,3 +32,9 @@ Bounded revision: strengthen the existing three branch entrances only, with no n
 Verification: 3 tests pass; final browser smoke entered the Warm Glow branch, triggered its reveal, returned to the surface, and reported zero page/console errors. Evidence: `prototypes/echo-caves/tests/evidence/surface.png` and `glow-reveal.png` (updated revision captures).
 
 Player Validation after the cue revision: not performed. The next unassisted play should test whether the revised entrance cues create initial attraction before interpreting the earlier partial sustained-interest result.
+
+**U2 report (2026-10-08):** After an unassisted replay of the cue revision, the user answered "Yes, it works better now" to whether the entrance cues were enough to make a branch an active choice.
+
+Interpretation: initial attraction improved relative to U1. This is a **partial pass**, not evidence that every branch is equally compelling or that the cues are strong enough for a production game; the response does not quantify which cue attracted the user or why. The earlier U1 findings remain active: atmospheric pressure passed, and a first-branch payoff motivated a second branch.
+
+Decision: Echo Caves survives the bounded cue-revision validation. The approved one-hour / one-iteration revision is complete; no further content or implementation is authorized without a new scope/budget decision.
