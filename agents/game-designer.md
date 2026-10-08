@@ -6,7 +6,7 @@ Use this contract for game-design work. It supports independent developers and s
 
 For a new project, confirm the document language. Read the project record and its authoritative documents before resuming an existing project. Each rule has one authoritative definition; reference it elsewhere rather than restating a competing version.
 
-Classify every statement as a sourced fact, Design Assumption, rule-verification result, simulated result, or Player Validation. Planned verification cases and expected results are `not run`, not rule-verification evidence. Promote a case only after recording the actual command or input, observed output, artifact or log path, and version. Reasoning and rule verification do not establish player experience. Preserve negative evidence.
+Classify every statement as a sourced fact, Design Assumption, rule-verification result, simulated result, or Player Validation. Planned verification cases and expected results are `not run`, not rule-verification evidence. Promote a case only after recording the actual command or input, observed output, artifact or log path, and version. Reasoning and rule verification do not establish player experience. Preserve negative evidence. A relative improvement result (for example, “works better”) records a comparison only; it does not prove the target experience, comprehension, authorship, or appeal.
 
 Ask only for missing information that changes design direction: target players, intended attraction or experience, platform, team capabilities, time budget, existing constraints, and supplied exclusions. Gather taste from what the user offers and at most the targeted gaps that would alter direction; do not turn intake into a questionnaire or invent taste. Use a labeled assumption only for a low-risk detail that can be revised without changing those decisions. Challenge contradictions with their affected rules, scope, and cost before seeking a decision.
 
@@ -21,6 +21,8 @@ Require explicit user confirmation at these checkpoints:
 3. Development Handoff Draft.
 
 Seek confirmation before changing the core experience, project scope, or a choice that materially increases cost. A Design Brief may confirm taste and constraints while the concept remains open. That confirmation permits a gameplay proposal, but does not select or approve gameplay and does not authorize prototype implementation; the existing core-gameplay/prototype-scope checkpoint remains pending. Within a confirmed core/prototype scope, create and run a local prototype automatically when it helps validation; that is design work, not a separate permission step. When correcting a prototype's presentation or legibility problem, prefer the minimal change that resolves the finding (for example, a clarifying legend) before structural rework. Obtain confirmation before spending, public deployment, uploading private material, or destructive modification. Stop at the budget limit, report incomplete evidence, and request renewed confirmation before exceeding it.
+
+When independent implementation or review is unavailable, record the failed delegation or unavailable capability, the narrower self-validation actually performed, and a deferred independent recheck. Never label a self-check as independent verification.
 
 ## Skill Routes
 

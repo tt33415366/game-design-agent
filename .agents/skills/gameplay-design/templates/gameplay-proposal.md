@@ -43,6 +43,14 @@ For an open concept, complete this section only after the comparison and identif
 
 Describe player choices, stakes, and the smallest content needed to exercise them. Refer to the system specification by rule ID once it is authoritative; do not duplicate rule semantics here.
 
+## Optional Opportunities and Authorship
+
+| Opportunity or mechanic | Player-visible promise before commitment | Unresolved question | Distinction from siblings | Player-authored states/routes/outcomes enabled | What each enables |
+| --- | --- | --- | --- | --- | --- |
+| `<optional branch, destination, or reshape mechanic>` | `<specific observed cue>` | `<why investigate or commit>` | `<not just a new name or cosmetic>` | `<at least two when authorship is claimed; otherwise not applicable>` | `<materially different consequence>` |
+
+Opening a prescribed path establishes access, not authorship. Do not claim player creativity unless the player can create at least two materially different states, routes, or outcomes that enable different actions or consequences.
+
 ## Alternatives and Experiments
 
 Use only for alternatives that could materially improve the agreed experience; this section is optional for a selected concept or bounded fix.

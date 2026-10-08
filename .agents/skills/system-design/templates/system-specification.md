@@ -29,6 +29,14 @@ Other documents refer to rule IDs in this specification and do not restate their
 | --- | --- | --- | --- |
 | `C-<id>` | `<rule IDs>` | `<value>` | `<value or none>` |
 
+## Pressure Semantics
+
+| Intended pressure | Atmospheric cue | Spatial commitment | Punishment or fail state | Numeric resource | Deliberate exclusions |
+| --- | --- | --- | --- | --- | --- |
+| `<pressure or none>` | `<sensory or environmental signal>` | `<what route, timing, or position commits the player>` | `<rule ID or none>` | `<state ID or none>` | `<what is intentionally not used and why>` |
+
+Atmospheric pressure is not evidence of a numeric resource system. Specify each separately so implementation does not introduce an unapproved meter, countdown, damage model, or fail state.
+
 ## Verification Cases
 
 | Case | Initial state | Inputs in order | Expected rule IDs and final state | Execution status and evidence |
