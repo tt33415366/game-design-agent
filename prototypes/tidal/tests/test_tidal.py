@@ -44,9 +44,9 @@ class TidalTests(unittest.TestCase):
     def test_drag_opens_segment_one_way(self):
         result = self.evaluate("""() => {
           const d = __tidalDebug, w = TidalWorld, r = TidalRules;
-          d.reset(); d.setPlayer(745, 370);
+          d.reset(); d.setPlayer(745, 460);
           let stones = r.resetStones(w), player = d.player, placed = -1;
-          for (let i = 0; i < 70 && placed < 0; i += 1) {
+          for (let i = 0; i < 120 && placed < 0; i += 1) {
             const res = r.drag(player, {KeyW: true}, w, stones);
             stones = res.stones; player = res.player; placed = res.placedIndex;
           }

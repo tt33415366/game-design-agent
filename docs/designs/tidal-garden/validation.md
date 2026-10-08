@@ -19,4 +19,10 @@ Verification evidence:
 
 ### Player Validation
 
-Not performed. Awaiting the user's unassisted first play per F8, with a post-play question on whether the route felt self-authored.
+**U1 defect report (2026-10-08):** During unassisted play the user found the stones unreachable — the stone home positions were centered inside their own blocked segments, so the player could never touch them ("I can't run into the square block, so the stone can't really be touched"). Classification: Player Validation (comprehension/usability failure), negative evidence preserved.
+
+Root cause: design error — stone home == blockedSeg center. Fixed by relocating each stone's home just below its blocked segment (inside the channel, reachable from below) and widening channels to keep them contiguous. Verified: 6/6 suite, real player drags the north stone home(745,430) to open notch(745,250) in ~3 s, full-phase smoke clean with zero page errors.
+
+This is exactly the F1/F4 affordance-honesty class of bug the harvest was meant to catch earlier — flagged as a process note: the drawn-vs-collidable and reachability checks passed, but the *interaction reachability* (can the player physically touch the draggable) was not a planned check. Candidate harvest follow-up: add an "interactable must be reachable" probe to the validation plan template.
+
+Awaiting the user's re-test.

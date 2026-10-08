@@ -7,9 +7,12 @@
     // Three channels run west->east. Each has one blocked segment with a stone in a notch.
     // Stone home notch blocks; open notch is 70px to the side, freeing the segment.
     channels: [
-      { id: "north", rect: rect(300, 300, 1300, 90, "channel"), blockedSeg: rect(700, 300, 90, 90, "blocked"), stone: { home: { x: 745, y: 345 }, open: { x: 745, y: 250 } } },
-      { id: "mid", rect: rect(300, 700, 1300, 90, "channel"), blockedSeg: rect(1000, 700, 90, 90, "blocked"), stone: { home: { x: 1045, y: 745 }, open: { x: 1045, y: 650 } } },
-      { id: "south", rect: rect(300, 1100, 1300, 90, "channel"), blockedSeg: rect(1300, 1100, 90, 90, "blocked"), stone: { home: { x: 1345, y: 1145 }, open: { x: 1345, y: 1050 } } }
+      // Stone home sits just below its blocked segment (inside the channel, reachable
+      // from below); the open notch is just above the segment. Pushing the stone up past
+      // the segment and into the notch opens the channel.
+      { id: "north", rect: rect(300, 300, 1300, 90, "channel"), blockedSeg: rect(700, 300, 90, 90, "blocked"), stone: { home: { x: 745, y: 430 }, open: { x: 745, y: 250 } } },
+      { id: "mid", rect: rect(700, 700, 900, 90, "channel"), blockedSeg: rect(1000, 700, 90, 90, "blocked"), stone: { home: { x: 1045, y: 830 }, open: { x: 1045, y: 650 } } },
+      { id: "south", rect: rect(1100, 1100, 500, 90, "channel"), blockedSeg: rect(1300, 1100, 90, 90, "blocked"), stone: { home: { x: 1345, y: 1230 }, open: { x: 1345, y: 1050 } } }
     ],
     startRock: rect(340, 700, 80, 90, "startrock"),
     pool: { x: 1700, y: 745, radius: 60 },
