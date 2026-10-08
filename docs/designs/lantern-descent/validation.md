@@ -16,4 +16,11 @@ Delegation limitation: this implementation was completed in-thread. The earlier 
 
 ## Player Validation
 
-Not performed. First play must be unassisted before explaining branches, cues, or intended pressure.
+**U1 report (2026-10-08, current conversation):** The user reported that the branch cues were not very attractive (with the caveat that this is a prototype), but did enter a second branch because the first branch ended with noticeable feedback. The pressure felt atmospheric.
+
+Interpretation by F6 signals:
+- Initial attraction: **weak / not established**. The branch entrances did not create enough pull on their own.
+- Sustained interest: **partial pass**. A noticeable payoff at the end of the first branch motivated another branch.
+- Pressure reading: **pass**. Darkness/narrowing read as atmosphere, not forced resource management.
+
+Decision: **revise**, not stop. The risk-and-release structure has evidence of potential, but the cue/reward chain is weak at the entrance. Do not expand the cave or add more branches yet; a future revision should first make branch promises legible and specific, then retest whether the player enters because of the cue rather than only because the previous branch happened to pay off. This validation used the full approved 2-hour / 1-iteration budget; any revision requires a new scope and budget checkpoint.
