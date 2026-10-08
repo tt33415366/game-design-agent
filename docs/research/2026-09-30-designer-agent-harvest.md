@@ -72,3 +72,53 @@ All eight diffs applied 2026-09-30 after the user's "All" approval. Files touche
 - Decision rule: if the user reports access without authorship, stop the direction as-is. Do not respond by adding more identical interactables or content; revise the mechanic so choices produce materially different routes or consequences, then seek a new scope/budget checkpoint.
 
 This is a **proposal**, not yet applied. It is the first harvest item explicitly derived from a failed structural hypothesis rather than a runtime or presentation defect.
+
+## Cross-Prototype Harvest: B Structure + Risk Rhythm (2026-10-08)
+
+Scope: Three Stones U1-U4, Echo Caves U1-U2, and implementation/verification records. This section is approved for analysis by the user; its proposed instruction/template diffs remain pending until separately confirmed.
+
+### F10. An entrance needs a specific promise, not merely presence
+
+- Evidence: Echo Caves U1 found branch cues weak; U2 found the revised visible pulse/current/silhouette cues worked better.
+- Classification: **skill gap** (`gameplay-design`) + **template gap** (`gameplay-proposal`).
+- Proposed diff: require every optional destination or branch to state the player-visible promise before entry, the unresolved question it creates, and how it differs from sibling choices. A named branch, colored tunnel, or generic darkness is not a promise.
+
+### F11. Validate the promise-to-payoff chain, not each end independently
+
+- Evidence: Echo Caves U1: a noticeable first-branch payoff motivated a second entry, while its original entrance cue did not. The cue revision improved attraction.
+- Classification: **template gap** (`validation-plan`) + **skill gap** (`design-prototype`).
+- Proposed diff: add a Player Validation sequence: `notice cue -> enter or avoid -> encounter payoff or retreat -> choose next opportunity`; record the actual stated reason for the next choice. Do not treat a reveal in isolation as evidence that its entrance promise worked.
+
+### F12. Separate atmospheric pressure from punishment and numeric management
+
+- Evidence: Sunlight Shelf U1 and Echo Caves U1 reported pressure as atmosphere, not forced resource management. The brief excluded an oxygen meter deliberately.
+- Classification: **skill gap** (`gameplay-design` and `system-design`).
+- Proposed diff: when a brief calls for tension/pressure, explicitly classify its source as `atmospheric cue`, `spatial commitment`, `punishment/fail state`, or `numeric resource`. State why the chosen type serves the intended experience and what is excluded. Never silently replace atmospheric pressure with a countdown/meter.
+
+### F13. Interaction verification must cover approach, success, and exit
+
+- Evidence: Three Stones U1: stone unreachable. U2: successful stone push trapped the player. Existing helper tests and topology checks did not exercise the complete player path.
+- Classification: **template gap** (`validation-plan`) + **skill gap** (`design-prototype`).
+- Proposed diff: add mandatory interaction-path evidence for every new interactable: `approach with actual input -> initiate -> complete success state -> leave the changed state`. Include actual keyboard/controller input through the live loop, not debug teleportation or helper-only calls.
+
+### F14. Apply accessibility-is-not-authorship as an active rule
+
+- Evidence: Three Stones U4: "It only makes it accessible, not creative." F9 recorded the lesson but remains proposal-only.
+- Classification: **skill gap** (`gameplay-design`) + **template gap** (`validation-plan`).
+- Proposed diff: require any build/reshape/agency mechanic to name at least two materially different player-authored spatial states, routes, or outcomes. Include a Player Validation question: "What did you make different, and what did that let you do?" If the answer is only "I opened the intended route," classify authorship as failed and stop rather than add more identical gates.
+
+### F15. Relative improvement is not full success
+
+- Evidence: Three Stones U3 and Echo Caves U2: "works a bit better" / "works better now." Both show directionally useful improvement but do not identify strength, transferability, or whether all choices work.
+- Classification: **contract gap** (evidence classification) + **template gap** (`evidence-log`).
+- Proposed diff: add `relative improvement` as an evidence qualifier. It may support a bounded revision surviving, but cannot by itself establish appeal, comprehension, balance, accessibility, or production readiness. Record which element improved and what remains unmeasured.
+
+### F16. Independent verification failure needs a durable fallback record
+
+- Evidence: Unmarked Valley v2, Sunlight Shelf, Three Stones, and Echo Caves were root-implemented/self-verified after worker agents failed with provider 502 or encrypted-content errors.
+- Classification: **skill gap** (`design-prototype`) + **template gap** (`evidence-log`); not a game-design failure.
+- Proposed diff: when independent implementation/review/testing is unavailable, require a `downgraded independence` entry naming failed delegation, self-verification scope, and a deferred independent-recheck queue. It must never be silently treated as independent evidence.
+
+## Recommendation for Application
+
+Apply F10-F16 as one focused set. They are all additive instruction/template safeguards, do not alter approval checkpoints, and directly address observed real-project evidence. F9 should be applied in the same patch because F14 operationalizes it.
