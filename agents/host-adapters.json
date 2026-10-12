@@ -1,0 +1,20 @@
+{
+  "claude": {
+    "roles": {
+      "explorer": {"tools": ["Read", "Glob", "Grep"]},
+      "researcher": {"tools": ["Read", "Glob", "Grep", "WebSearch", "WebFetch"]},
+      "reviewer": {"tools": ["Read", "Glob", "Grep"]},
+      "tester": {"tools": ["Read", "Glob", "Grep", "Edit", "Write", "Bash"]},
+      "worker": {"tools": ["Read", "Glob", "Grep", "Edit", "Write", "Bash"]}
+    }
+  },
+  "antigravity": {
+    "roles": {
+      "explorer": {"tools": ["view_file", "list_dir", "find_by_name", "grep_search"]},
+      "researcher": {"tools": ["view_file", "list_dir", "find_by_name", "grep_search", "search_web", "read_url_content"]},
+      "reviewer": {"tools": ["view_file", "list_dir", "find_by_name", "grep_search"]},
+      "tester": {"tools": ["view_file", "list_dir", "find_by_name", "grep_search", "write_to_file", "replace_file_content", "multi_replace_file_content", "run_command", "manage_task"]},
+      "worker": {"tools": ["view_file", "list_dir", "find_by_name", "grep_search", "write_to_file", "replace_file_content", "multi_replace_file_content", "run_command", "manage_task"]}
+    }
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "files": {
+    ".agents/agents/explorer.md": "1d38949a95c5057ed7bcc17414b91143b7b6793a07e02be076bfd3cef590c798",
+    ".agents/agents/researcher.md": "5634cb3058fe51341624ff5c5e01d7ac1685c19e85daca97bb4e7ed9e3b75116",
+    ".agents/agents/reviewer.md": "b0f9910e9bf95079ceb4ac8feba7eac1c7166af47c9748d7090ff3752b2f0c54",
+    ".agents/agents/tester.md": "704d9b674a10b0fc9f10350eb36b8182bc22a30728c0ab267edbc119cdb5ddbe",
+    ".agents/agents/worker.md": "c4f294ab1e59f446dae20336aa73cd473972fa1841b9fa4ee6a94ca381d1fe2d",
+    ".claude/agents/explorer.md": "614b156a74393ca8be931664b5b0269afb4fcb55ccdacb4fbd511cb9734094b6",
+    ".claude/agents/researcher.md": "dfe5208a4f8cfd088491f3b05cc96602936a5bdeaedaf3d03fd7f47f04e7ce44",
+    ".claude/agents/reviewer.md": "ca7e4c38839141d2564c4a50a0a08b97dad9bd21c62e3a6b9f77d4c52e1e56f7",
+    ".claude/agents/tester.md": "00475c55ca20bec09167e23f719c6bc55e98908886df5627804a8ae9df184900",
+    ".claude/agents/worker.md": "5973b7be675cf51928319d9c0010d90f38facbad57bcbf5c14b4eebf7c521641",
+    ".claude/skills/design-change/SKILL.md": "2feef8a30aa0a8a742c1a4bec63d5f4b2503cd65acd99ab157209ff24eed122f",
+    ".claude/skills/design-change/templates/change-history.md": "6bdfc1044afb0e1dc758b3f77a3071159109ff2f7d9c08f597128ad8ace8e4cf",
+    ".claude/skills/design-change/templates/change-impact.md": "1d4e6e3f12892195b9b2841e36feaf579221c5cc82712c608d9629512aab0d9b",
+    ".claude/skills/design-intake/SKILL.md": "c4be78c255888c5b21941345d91899b116b1f7cf595106ec5742513c5cfa3932",
+    ".claude/skills/design-intake/templates/design-brief.md": "361bd1921bc62f2c6bf07a65fd0990eab4093d12a58cde02dbe2e3e0b5d59afe",
+    ".claude/skills/design-prototype/SKILL.md": "1b1ace0a22a1bedda18403ccb0a2f66a517e59519957c8142813ef57739641e6",
+    ".claude/skills/design-prototype/templates/evidence-log.md": "89affaba1b51562f87ceb328ea6af3bb1de9aa88d854adf67f42ef088dfca071",
+    ".claude/skills/design-prototype/templates/validation-plan.md": "4e6b70d6897396187783578e859497c0c52f293ae16bbc761b8797fc1db622dc",
+    ".claude/skills/design-review/SKILL.md": "dc213fe841b265f3131c15ad8e30d090b42babbc0e5f9b2620d9a405a78a21ff",
+    ".claude/skills/design-review/templates/design-review.md": "b967d18e16b28ea183e6f4090a44712129b90ea12236a50aba0d993e00fe6c43",
+    ".claude/skills/design-review/templates/development-handoff.md": "7bb4b2a9c037b0abbbdfda5602741cab30de96a8337641fa5cf65cacdbaa0667",
+    ".claude/skills/gameplay-design/SKILL.md": "275fc5d40c1daafd3761a4cbf625c224bc0a9b903045009f8ae27fd8492558b1",
+    ".claude/skills/gameplay-design/templates/gameplay-proposal.md": "504e836b3e3cb75161e3ef856b58a6b9a8620985b2676d1dc53ba52d5916cfd9",
+    ".claude/skills/system-design/SKILL.md": "5d729316e059e4b3bb2ebbd06b259816be520713408d3a00e8f7b945adeaeb86",
+    ".claude/skills/system-design/templates/system-specification.md": "7f9764c6ce5bcc7fc8942c939db1c4aacd9d911a9954283047016df0be7ac184"
+  }
+}
