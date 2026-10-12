@@ -19,3 +19,31 @@ git diff --check
 `tests/behavior/` is retained historical qualitative behavior evidence from independent or controller-run exercises. It is distinct from the constructed scenario documents and is not a current executable test suite. Its simulated results, drafted outputs, and historical failed qualitative runs remain evidence with their stated limits; they do not establish current rule verification, real-project results, or Player Validation.
 
 No scenario authoring or document check in this repository performs real-project validation or Player Validation.
+
+## Host support qualification
+
+`tests/host_support/test_qualification.py` checks that all six routes and all
+five roles remain present for every host projection, that foreign host metadata
+does not leak between generated files, and that runtime claims are backed by
+retained evidence. The renderer checks are standard-library only and must be
+run with Python 3.11 or newer; the local `python3` may be older.
+
+From the repository root, run the offline qualification commands:
+
+```sh
+python3.11 -m unittest discover -s tests/host_support -p 'test_*.py'
+python3.11 scripts/sync_host_adapters.py --check
+python3.11 tests/behavior/verification-scripts/check_game_designer_links.py
+git diff --check
+```
+
+Repeat the renderer and unit commands from a temporary copy whose path
+contains spaces and whose current working directory is outside that copy.
+The generated projections and manifest are owned by the renderer; do not edit
+them by hand. Use `--check` to inspect drift. Rollback is a local git revert
+of implementation commits; it does not touch global host configuration.
+
+The immutable preservation comparison remains in
+`tests/host_support/test_shared_contract.py` and uses
+`tests/host_support/preservation-baseline.json` from source commit `509aeba`.
+Do not regenerate that manifest to hide a change.
