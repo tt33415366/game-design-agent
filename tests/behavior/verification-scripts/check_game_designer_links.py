@@ -4,7 +4,7 @@ import re
 from pathlib import Path
 
 
-ROOT = Path('/data/lea/Workspace/game_designer')
+ROOT = Path(__file__).resolve().parents[3]
 EXCLUDED = {
     ROOT / 'tests/scenarios/01-new-game/intake.md',
     ROOT / 'tests/scenarios/02-system-extension/input.md',
