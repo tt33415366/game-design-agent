@@ -43,7 +43,12 @@ The generated projections and manifest are owned by the renderer; do not edit
 them by hand. Use `--check` to inspect drift. Rollback is a local git revert
 of implementation commits; it does not touch global host configuration.
 
-The immutable preservation comparison remains in
+The preservation comparison remains in
 `tests/host_support/test_shared_contract.py` and uses
-`tests/host_support/preservation-baseline.json` from source commit `509aeba`.
-Do not regenerate that manifest to hide a change.
+`tests/host_support/preservation-baseline.json`, originally from source commit
+`509aeba`. The [2026-10-13 instruction revision](behavior/designer-craft-checks.md)
+explicitly updates four skill hashes; all other hashes retain that baseline.
+Intentional source revisions must identify the changed entries and their reason;
+do not regenerate that manifest to hide a change. The linked record includes
+partial smoke results and unresolved provenance limitations, not game-quality
+acceptance.
